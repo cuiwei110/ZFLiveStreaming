@@ -20,6 +20,7 @@
 		18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C61EC19C3E00187F97 /* Profile.storyboard */; };
 		18E8C2C91EC1A57A00187F97 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */; };
 		18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CB1EC1A79700187F97 /* Constant.swift */; };
+		18E8C2CE1EC1AF5500187F97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		18E8C2C61EC19C3E00187F97 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18E8C2CB1EC1A79700187F97 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				18E8C2BE1EC19B5300187F97 /* MainTabBarController.swift */,
 				18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */,
+				18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E8C2CE1EC1AF5500187F97 /* BaseViewController.swift in Sources */,
 				18E8C2BF1EC19B5300187F97 /* MainTabBarController.swift in Sources */,
 				18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */,
 				18E8C2C91EC1A57A00187F97 /* BaseNavigationController.swift in Sources */,
