@@ -12,8 +12,9 @@ class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupUI()
+        
     }
     
 }
@@ -22,6 +23,7 @@ class HomeViewController: BaseViewController {
 extension HomeViewController {
     fileprivate func setupUI() {
         setupNavigationBar()
+        
     }
     
     /// 设置导航栏
