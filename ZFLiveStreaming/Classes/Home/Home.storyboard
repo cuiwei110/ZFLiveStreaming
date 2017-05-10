@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="-3372" y="-52"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="YhW-76-8Fd">
             <objects>
-                <viewController storyboardIdentifier="Home" id="syU-tm-ANh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="syU-tm-ANh" customClass="HomeViewController" customModule="ZFLiveStreaming" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X7j-gw-NTf"/>
                         <viewControllerLayoutGuide type="bottom" id="t3W-B5-xkA"/>
