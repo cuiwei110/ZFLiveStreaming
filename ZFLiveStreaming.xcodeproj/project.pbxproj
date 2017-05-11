@@ -13,16 +13,21 @@
 		18E8C2941EC1993C00187F97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2921EC1993C00187F97 /* LaunchScreen.storyboard */; };
 		18E8C29F1EC1993C00187F97 /* ZFLiveStreamingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C29E1EC1993C00187F97 /* ZFLiveStreamingTests.swift */; };
 		18E8C2AA1EC1993C00187F97 /* ZFLiveStreamingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2A91EC1993C00187F97 /* ZFLiveStreamingUITests.swift */; };
-		18E8C2BF1EC19B5300187F97 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2BE1EC19B5300187F97 /* MainTabBarController.swift */; };
 		18E8C2C11EC19C0E00187F97 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C01EC19C0E00187F97 /* Home.storyboard */; };
 		18E8C2C31EC19C1700187F97 /* Rank.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C21EC19C1700187F97 /* Rank.storyboard */; };
 		18E8C2C51EC19C3600187F97 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C41EC19C3600187F97 /* Discover.storyboard */; };
 		18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C61EC19C3E00187F97 /* Profile.storyboard */; };
-		18E8C2C91EC1A57A00187F97 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */; };
 		18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CB1EC1A79700187F97 /* Constant.swift */; };
-		18E8C2CE1EC1AF5500187F97 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */; };
 		18E8C2D01EC1AFD600187F97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CF1EC1AFD600187F97 /* HomeViewController.swift */; };
 		18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F325561EC29A980014AF77 /* UIColor+extension.swift */; };
+		18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */; };
+		18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADF1EC43880009B7FDC /* BaseViewController.swift */; };
+		18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE01EC43880009B7FDC /* MainTabBarController.swift */; };
+		18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE61EC43924009B7FDC /* ZFContentView.swift */; };
+		18F46AEC1EC43924009B7FDC /* ZFPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */; };
+		18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE81EC43924009B7FDC /* ZFPageView.swift */; };
+		18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */; };
+		18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,16 +60,21 @@
 		18E8C2A51EC1993C00187F97 /* ZFLiveStreamingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFLiveStreamingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E8C2A91EC1993C00187F97 /* ZFLiveStreamingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZFLiveStreamingUITests.swift; sourceTree = "<group>"; };
 		18E8C2AB1EC1993C00187F97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18E8C2BE1EC19B5300187F97 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		18E8C2C01EC19C0E00187F97 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		18E8C2C21EC19C1700187F97 /* Rank.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rank.storyboard; sourceTree = "<group>"; };
 		18E8C2C41EC19C3600187F97 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		18E8C2C61EC19C3E00187F97 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
-		18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18E8C2CB1EC1A79700187F97 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18E8C2CF1EC1AFD600187F97 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F325561EC29A980014AF77 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		18F46ADF1EC43880009B7FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		18F46AE01EC43880009B7FDC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		18F46AE61EC43924009B7FDC /* ZFContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFContentView.swift; sourceTree = "<group>"; };
+		18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageStyle.swift; sourceTree = "<group>"; };
+		18F46AE81EC43924009B7FDC /* ZFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageView.swift; sourceTree = "<group>"; };
+		18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleLabel.swift; sourceTree = "<group>"; };
+		18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,10 +194,9 @@
 		18E8C2BB1EC19A7900187F97 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18F46AE41EC4391D009B7FDC /* Library */,
 				18F325551EC29A840014AF77 /* Extension */,
-				18E8C2BE1EC19B5300187F97 /* MainTabBarController.swift */,
-				18E8C2C81EC1A57A00187F97 /* BaseNavigationController.swift */,
-				18E8C2CD1EC1AF5500187F97 /* BaseViewController.swift */,
+				18F46ADD1EC43880009B7FDC /* Controller */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -222,6 +231,36 @@
 				18F325561EC29A980014AF77 /* UIColor+extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		18F46ADD1EC43880009B7FDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */,
+				18F46ADF1EC43880009B7FDC /* BaseViewController.swift */,
+				18F46AE01EC43880009B7FDC /* MainTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18F46AE41EC4391D009B7FDC /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				18F46AE51EC43924009B7FDC /* ZFPageView */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		18F46AE51EC43924009B7FDC /* ZFPageView */ = {
+			isa = PBXGroup;
+			children = (
+				18F46AE61EC43924009B7FDC /* ZFContentView.swift */,
+				18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */,
+				18F46AE81EC43924009B7FDC /* ZFPageView.swift */,
+				18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */,
+				18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */,
+			);
+			path = ZFPageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,13 +401,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E8C2CE1EC1AF5500187F97 /* BaseViewController.swift in Sources */,
-				18E8C2BF1EC19B5300187F97 /* MainTabBarController.swift in Sources */,
 				18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */,
 				18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */,
-				18E8C2C91EC1A57A00187F97 /* BaseNavigationController.swift in Sources */,
+				18F46AEC1EC43924009B7FDC /* ZFPageStyle.swift in Sources */,
 				18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */,
+				18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */,
+				18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */,
+				18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */,
+				18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */,
+				18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */,
 				18E8C2D01EC1AFD600187F97 /* HomeViewController.swift in Sources */,
+				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,
+				18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +564,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ZFLiveStreaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zafir.zzf.ZFLiveStreaming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,7 +578,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ZFLiveStreaming/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zafir.zzf.ZFLiveStreaming;
 				PRODUCT_NAME = "$(TARGET_NAME)";
