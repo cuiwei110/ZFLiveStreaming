@@ -18,7 +18,6 @@
 		18E8C2C51EC19C3600187F97 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C41EC19C3600187F97 /* Discover.storyboard */; };
 		18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C61EC19C3E00187F97 /* Profile.storyboard */; };
 		18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CB1EC1A79700187F97 /* Constant.swift */; };
-		18E8C2D01EC1AFD600187F97 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CF1EC1AFD600187F97 /* HomeViewController.swift */; };
 		18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F325561EC29A980014AF77 /* UIColor+extension.swift */; };
 		18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */; };
 		18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADF1EC43880009B7FDC /* BaseViewController.swift */; };
@@ -28,6 +27,11 @@
 		18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE81EC43924009B7FDC /* ZFPageView.swift */; };
 		18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */; };
 		18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */; };
+		18F46B2E1EC466A9009B7FDC /* ZFWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B2D1EC466A9009B7FDC /* ZFWaterfallLayout.swift */; };
+		18F46B311EC46D01009B7FDC /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F46B301EC46D01009B7FDC /* types.plist */; };
+		18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B351EC46D78009B7FDC /* HomeType.swift */; };
+		18F46B391EC46DFE009B7FDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B381EC46DFE009B7FDC /* HomeViewController.swift */; };
+		18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,6 @@
 		18E8C2C41EC19C3600187F97 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		18E8C2C61EC19C3E00187F97 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		18E8C2CB1EC1A79700187F97 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		18E8C2CF1EC1AFD600187F97 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F325561EC29A980014AF77 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18F46ADF1EC43880009B7FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +78,11 @@
 		18F46AE81EC43924009B7FDC /* ZFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageView.swift; sourceTree = "<group>"; };
 		18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleLabel.swift; sourceTree = "<group>"; };
 		18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleView.swift; sourceTree = "<group>"; };
+		18F46B2D1EC466A9009B7FDC /* ZFWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFWaterfallLayout.swift; sourceTree = "<group>"; };
+		18F46B301EC46D01009B7FDC /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
+		18F46B351EC46D78009B7FDC /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
+		18F46B381EC46DFE009B7FDC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,7 @@
 		18E8C2881EC1993C00187F97 /* ZFLiveStreaming */ = {
 			isa = PBXGroup;
 			children = (
+				18F46B2F1EC46CD3009B7FDC /* Resource */,
 				18E8C2B71EC19A7900187F97 /* Classes */,
 				18E8C2891EC1993C00187F97 /* AppDelegate.swift */,
 				18E8C28D1EC1993C00187F97 /* Main.storyboard */,
@@ -185,8 +194,11 @@
 		18E8C2BA1EC19A7900187F97 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18F46B371EC46DFE009B7FDC /* Controller */,
+				18F46B2C1EC466A1009B7FDC /* View */,
+				18F46B341EC46D38009B7FDC /* ViewModel */,
+				18F46B331EC46D38009B7FDC /* Model */,
 				18E8C2C01EC19C0E00187F97 /* Home.storyboard */,
-				18E8C2CF1EC1AFD600187F97 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -254,13 +266,53 @@
 		18F46AE51EC43924009B7FDC /* ZFPageView */ = {
 			isa = PBXGroup;
 			children = (
-				18F46AE61EC43924009B7FDC /* ZFContentView.swift */,
-				18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */,
 				18F46AE81EC43924009B7FDC /* ZFPageView.swift */,
-				18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */,
 				18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */,
+				18F46AE61EC43924009B7FDC /* ZFContentView.swift */,
+				18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */,
+				18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */,
 			);
 			path = ZFPageView;
+			sourceTree = "<group>";
+		};
+		18F46B2C1EC466A1009B7FDC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18F46B2D1EC466A9009B7FDC /* ZFWaterfallLayout.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18F46B2F1EC46CD3009B7FDC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18F46B301EC46D01009B7FDC /* types.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		18F46B331EC46D38009B7FDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18F46B351EC46D78009B7FDC /* HomeType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18F46B341EC46D38009B7FDC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18F46B371EC46DFE009B7FDC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18F46B381EC46DFE009B7FDC /* HomeViewController.swift */,
+				18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,6 +424,7 @@
 			files = (
 				18E8C2C31EC19C1700187F97 /* Rank.storyboard in Resources */,
 				18E8C2941EC1993C00187F97 /* LaunchScreen.storyboard in Resources */,
+				18F46B311EC46D01009B7FDC /* types.plist in Resources */,
 				18E8C2911EC1993C00187F97 /* Assets.xcassets in Resources */,
 				18E8C28F1EC1993C00187F97 /* Main.storyboard in Resources */,
 				18E8C2C11EC19C0E00187F97 /* Home.storyboard in Resources */,
@@ -401,16 +454,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F46B2E1EC466A9009B7FDC /* ZFWaterfallLayout.swift in Sources */,
 				18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */,
 				18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */,
+				18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */,
 				18F46AEC1EC43924009B7FDC /* ZFPageStyle.swift in Sources */,
+				18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */,
+				18F46B391EC46DFE009B7FDC /* HomeViewController.swift in Sources */,
 				18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */,
 				18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */,
 				18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */,
 				18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */,
 				18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */,
 				18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */,
-				18E8C2D01EC1AFD600187F97 /* HomeViewController.swift in Sources */,
 				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,
 				18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */,
 			);

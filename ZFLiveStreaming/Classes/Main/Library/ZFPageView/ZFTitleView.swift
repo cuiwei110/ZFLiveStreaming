@@ -125,11 +125,15 @@ extension ZFTitleView {
 extension ZFTitleView: ZFContentViewDelegate {
     func contentView(_ contentView: ZFContentView, endScroll Index: Int) {
         selectIndex = Index
+        //调整位置
+        setScrollInset(titleLabels[selectIndex])
         
     }
     func contentView(_ contentView: ZFContentView, targetIndex: Int, progress: CGFloat) {
         if progress > 0.9 {
             selectIndex = targetIndex
+            //调整位置
+            setScrollInset(titleLabels[selectIndex])
         }
         
         let fonttransformScale = style.fontTransformScale
@@ -157,8 +161,7 @@ extension ZFTitleView: ZFContentViewDelegate {
                                      green: (normalColor.1 + excessColor.1 * progress) / 255.0,
                                      blue: (normalColor.2 + excessColor.2 * progress) / 255.0,
                                      alpha: 1)
-        //调整位置
-        setScrollInset(newLabel)
+    
         
     }
     

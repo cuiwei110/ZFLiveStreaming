@@ -7,8 +7,7 @@
 //
 
 import UIKit
-fileprivate let SCREEN_W: CGFloat = UIScreen.main.bounds.width
-fileprivate let SCREEN_H: CGFloat = UIScreen.main.bounds.height
+
 
 class ZFPageView: UIView {
     
@@ -22,6 +21,7 @@ class ZFPageView: UIView {
         self.titles = titles
         self.childControllers = childControllers
         self.parentVC = parentVC
+        parentVC.automaticallyAdjustsScrollViewInsets = false
         super.init(frame: frame)
         setupUI()
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZFPageStyle {
+class ZFPageStyle: NSObject {
     var titleViewBackColor = UIColor.lightGray    /// 标题视图背景颜色
 
     var titleViewHeight:CGFloat = 44.0     /// 标题视图高度
@@ -23,6 +23,12 @@ class ZFPageStyle {
 
     var textSelectColor = UIColor(colorLiteralRed: 255/255.0, green: 127/255.0, blue: 0, alpha: 1)   /// 标题选中颜色
     
+    convenience init(_ textNormalColor: UIColor, _ textSelectColor: UIColor, _ backColor: UIColor){
+        self.init()
+        self.textNormalColor = textNormalColor
+        self.textSelectColor = textSelectColor
+        self.titleViewBackColor = backColor
+    }
     
     
     
