@@ -9,11 +9,11 @@
 import UIKit
 
 class ZFPageStyle: NSObject {
-    var titleViewBackColor = UIColor.lightGray    /// 标题视图背景颜色
+    var titleViewBackColor = UIColor.white.withAlphaComponent(0.5)    /// 标题视图背景颜色
 
-    var titleViewHeight:CGFloat = 44.0     /// 标题视图高度
+    var titleViewHeight:CGFloat = 32     /// 标题视图高度
     
-    var titleFont: UIFont = UIFont.systemFont(ofSize: 16)
+    var titleFont: UIFont = UIFont.systemFont(ofSize: 15)
     
     var fontTransformScale:CGFloat = 1.2  /// 标题放大时的比例
 

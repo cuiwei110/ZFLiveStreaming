@@ -13,3 +13,8 @@ let MAINCOLOR: UIColor = #colorLiteral(red: 0.2546484768, green: 0.2665711939, b
 
 let SCREEN_W: CGFloat = UIScreen.main.bounds.width
 let SCREEN_H: CGFloat = UIScreen.main.bounds.height
+
+
+
+// 网络 URL
+let HOME_Anchor_URL = "http://qf.56.com/home/v4/moreAnchor.ios"

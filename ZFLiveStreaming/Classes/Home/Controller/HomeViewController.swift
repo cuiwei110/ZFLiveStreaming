@@ -51,10 +51,11 @@ extension HomeViewController {
     
     private func setupContentView() {
         let frame = CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H - 64)
-        let titles = loadTypes().map{ $0.title }
+        let types = loadTypes()
+        let titles = types.map{ $0.title }
         var childVcs = [UIViewController]()
-        for _ in 0 ..< titles.count {
-            childVcs.append(AnchorViewController())
+        for i in 0 ..< titles.count {
+            childVcs.append(AnchorViewController(type: types[i]))
         }
         let pageView = ZFPageView(frame: frame,
                                   titles: titles,
