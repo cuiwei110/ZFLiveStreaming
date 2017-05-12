@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import YYModel
 import SVProgressHUD
 class AnchorListVM: NSObject {
-    var anchorVM =  [AnchorVM]()
+    var anchorVMs =  [AnchorVM]()
 
 }
 
@@ -18,7 +19,7 @@ extension AnchorListVM {
     func loadData(type: HomeType, index: Int, finished: @escaping (_ isSuccess: Bool)->() ) {
         NetworkTool.shareInstance.loadHomeAnchorData(type: type, index: index) { (dict, error) in
             // 错误校验
-            guard error != nil else{
+            guard error == nil else{
                 SVProgressHUD.showError(withStatus: "请求出错")
                 finished(false)
                 return
@@ -27,11 +28,13 @@ extension AnchorListVM {
                 finished(false)
                 return
             }
-            let anchorArr = rootDict["message"]
-            
-            
-            
-            
+            let messageDict = rootDict["message"] as! [String: Any]
+            let anchorDictArr = messageDict["anchors"] as! [[String: Any]]
+            let anchorArr = NSArray.yy_modelArray(with: AnchorModel.self, json: anchorDictArr) as![AnchorModel]
+            //ViewModel数组赋值
+            self.anchorVMs = anchorArr.map{ AnchorVM(anchor: $0) }
+            finished(true)
+    
         }
     }
 }

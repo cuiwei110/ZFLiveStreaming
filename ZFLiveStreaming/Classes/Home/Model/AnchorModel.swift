@@ -22,6 +22,8 @@ class AnchorModel: NSObject {
     var live = 0
     var weeklyStar = 0
     var yearParty = 0
-    
-
+    override var description: String {
+        return yy_modelDescription()
+    }
+  
 }
