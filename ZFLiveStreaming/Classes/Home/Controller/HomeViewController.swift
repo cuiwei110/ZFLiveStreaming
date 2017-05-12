@@ -50,7 +50,7 @@ extension HomeViewController {
     /// 添加pageView
     
     private func setupContentView() {
-        let frame = CGRect(x: 0, y: 64, width: SCREEN_W, height: SCREEN_H - 64)
+        let frame = CGRect(x: 0, y: 64, width: KSCREEN_W, height: KSCREEN_H - 64 - 44)
         let types = loadTypes()
         let titles = types.map{ $0.title }
         var childVcs = [UIViewController]()

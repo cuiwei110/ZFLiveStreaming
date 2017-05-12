@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = MAINCOLOR
-        UITabBar.appearance().tintColor = MAINCOLOR
+        UINavigationBar.appearance().barTintColor = KMAINCOLOR
+        UITabBar.appearance().tintColor = KMAINCOLOR
         return true
     }
 

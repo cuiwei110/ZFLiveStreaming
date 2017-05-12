@@ -46,12 +46,11 @@ extension ZFPageView {
         addSubview(titleView)
         
         //内容
-        let contentFrame = CGRect(x: 0, y: titleView.frame.maxY, width: bounds.width, height: bounds.height - titleView.bounds.height)
+        let contentFrame = CGRect(x: 0, y: titleView.frame.maxY, width: bounds.width, height: bounds.height - titleView.frame.height)
         let contentView = ZFContentView(frame:contentFrame,
                                         childControllers: childControllers,
                                         parentVC: parentVC)
-
-        contentView.backgroundColor = UIColor.orange
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         addSubview(contentView)
         
         //设置标题view和内容视图的关系

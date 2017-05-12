@@ -17,9 +17,9 @@ class AnchorModel: NSObject {
     var roomid: String = ""
     var uid: String = ""
     
-    var push = 0
-    var focus = 0
-    var live = 0
+    var push = 0  // 直播显示方式
+    var focus = 0  //关注数
+    var live = 0  // 是否在直播
     var weeklyStar = 0
     var yearParty = 0
     override var description: String {

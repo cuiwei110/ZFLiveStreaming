@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AnchorCell" customModule="ZFLiveStreaming" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="210"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="210"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="54s-M2-X9k">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="210"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bca-0o-vOs" userLabel="昵称">
+                        <rect key="frame" x="10" y="183" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrY-Ll-utB" userLabel="人数">
+                        <rect key="frame" x="204" y="183" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_people" translatesAutoresizingMaskIntoConstraints="NO" id="xlU-m9-Bbf">
+                        <rect key="frame" x="189" y="187" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="ZEn-vl-ddH"/>
+                            <constraint firstAttribute="height" constant="10" id="sjz-h1-h5C"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_live" translatesAutoresizingMaskIntoConstraints="NO" id="wYM-NT-gMK" userLabel="直播icon">
+                        <rect key="frame" x="219" y="8" width="23" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="Ct2-e3-nqy"/>
+                            <constraint firstAttribute="width" constant="23" id="MXO-3x-g9b"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="UrY-Ll-utB" firstAttribute="leading" secondItem="xlU-m9-Bbf" secondAttribute="trailing" constant="5" id="2Gj-ml-0iv"/>
+                <constraint firstItem="wYM-NT-gMK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="BEi-RS-8O8"/>
+                <constraint firstAttribute="trailing" secondItem="wYM-NT-gMK" secondAttribute="trailing" constant="8" id="FVN-tL-jSc"/>
+                <constraint firstAttribute="trailing" secondItem="54s-M2-X9k" secondAttribute="trailing" id="LaS-wQ-Wc1"/>
+                <constraint firstAttribute="bottom" secondItem="54s-M2-X9k" secondAttribute="bottom" id="b0A-g5-tVg"/>
+                <constraint firstItem="54s-M2-X9k" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fwB-PG-hoZ"/>
+                <constraint firstItem="bca-0o-vOs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="fyn-tU-ywo"/>
+                <constraint firstAttribute="bottom" secondItem="UrY-Ll-utB" secondAttribute="bottom" constant="10" id="g5P-Z5-3PK"/>
+                <constraint firstAttribute="trailing" secondItem="UrY-Ll-utB" secondAttribute="trailing" constant="10" id="ils-Fa-LDe"/>
+                <constraint firstAttribute="bottom" secondItem="bca-0o-vOs" secondAttribute="bottom" constant="10" id="lXh-Yr-2lk"/>
+                <constraint firstItem="54s-M2-X9k" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="odT-P6-kOi"/>
+                <constraint firstItem="UrY-Ll-utB" firstAttribute="centerY" secondItem="xlU-m9-Bbf" secondAttribute="centerY" id="ud8-Zs-Z1z"/>
+            </constraints>
+            <size key="customSize" width="250" height="210"/>
+            <connections>
+                <outlet property="albumImageView" destination="54s-M2-X9k" id="53o-bn-XEB"/>
+                <outlet property="liveImageView" destination="wYM-NT-gMK" id="Aru-sv-Os3"/>
+                <outlet property="nameLabel" destination="bca-0o-vOs" id="IhN-tV-sOv"/>
+                <outlet property="onlinePeopleLabel" destination="UrY-Ll-utB" id="cAl-YQ-b8a"/>
+            </connections>
+            <point key="canvasLocation" x="-591" y="180"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_icon_live" width="23" height="13"/>
+        <image name="home_icon_people" width="7" height="7"/>
+    </resources>
+</document>

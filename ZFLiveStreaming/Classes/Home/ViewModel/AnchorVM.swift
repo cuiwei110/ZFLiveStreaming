@@ -10,7 +10,20 @@ import UIKit
 
 class AnchorVM: NSObject {
     var anchor: AnchorModel
+    
+    var nickName: String
+    var onlineNumber: String
+    var avatorUrl: String
+    var isLiving: Bool
+    
+    
     init(anchor: AnchorModel) {
         self.anchor = anchor
+        
+        self.nickName = anchor.name
+        self.onlineNumber = String(anchor.focus)
+        self.avatorUrl = anchor.pic74
+        self.isLiving = anchor.live == 1
+        
     }
 }

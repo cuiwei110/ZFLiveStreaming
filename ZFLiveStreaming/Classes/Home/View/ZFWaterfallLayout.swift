@@ -7,19 +7,23 @@
 //
 
 import UIKit
-protocol ZFWaterfallDataSource: class {
+@objc protocol ZFWaterfallDataSource: class {
     func collectionView(_ collectionView: UICollectionView,_ heightOfIndexPath: IndexPath) -> CGFloat
-    func collectionViewColmuns(_ collectionView: UICollectionView) -> Int
+    @objc optional func collectionViewColmuns(_ collectionView: UICollectionView) -> Int
 }
 
 
 class ZFWaterfallLayout: UICollectionViewFlowLayout {
     weak var delegate: ZFWaterfallDataSource?
-    fileprivate lazy var columns: Int = {
-        let colmun =  self.delegate?.collectionViewColmuns(self.collectionView!) ?? 0
-        return colmun
+  
+    
+    fileprivate lazy var columnsHeight: [CGFloat] = {
+        let columns =  self.delegate?.collectionViewColmuns?(self.collectionView!) ?? 2
+        return Array.init(repeating: CGFloat(0), count: columns)
     }()
+
     fileprivate var attributes: [UICollectionViewLayoutAttributes] = [UICollectionViewLayoutAttributes]()
+    fileprivate var maxH: CGFloat = 0
     
 }
 
@@ -28,8 +32,8 @@ extension ZFWaterfallLayout {
         super.prepare()
         if !attributes.isEmpty { return }
         
-        var columnsHeight = Array.init(repeating: CGFloat(0), count: columns)
-        
+        let columns =  self.delegate?.collectionViewColmuns?(self.collectionView!) ?? 2
+
         let cellW: CGFloat = (collectionView!.bounds.width - sectionInset.left - sectionInset.right - CGFloat(columns - 1) * minimumInteritemSpacing) / CGFloat(columns)
         for i in 0 ..< collectionView!.numberOfItems(inSection: 0) {
             let indexPath = IndexPath(item: i, section: 0)
@@ -44,6 +48,7 @@ extension ZFWaterfallLayout {
             columnsHeight[minIndex] +=  cellH + minimumLineSpacing
             attributes.append(attr)
         }
+        maxH = columnsHeight.max()! + sectionInset.bottom - minimumInteritemSpacing
     }
 }
 
@@ -53,6 +58,6 @@ extension ZFWaterfallLayout {
     }
     
     override var collectionViewContentSize: CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 1000)
+        return CGSize(width: UIScreen.main.bounds.width, height: maxH)
     }
 }
