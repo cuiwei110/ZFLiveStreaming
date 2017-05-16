@@ -80,6 +80,9 @@ extension AnchorViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let roomVC = LiveRoomViewController()
+        
+        navigationController?.pushViewController(roomVC, animated: true)
         
     }
     
