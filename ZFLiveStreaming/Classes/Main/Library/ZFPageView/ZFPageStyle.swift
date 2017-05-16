@@ -19,8 +19,8 @@ class ZFPageStyle: NSObject {
 
     var titleMargin: CGFloat = 20   //标题之间的间距
     
-    var textNormalColor = UIColor(colorLiteralRed: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 1)    /// 标题普通颜色
-
+    var textNormalColor =  UIColor(colorLiteralRed: 52/255.0, green: 53/255.0, blue: 54/255.0, alpha: 1)    /// 标题普通颜色
+    
     var textSelectColor = UIColor(colorLiteralRed: 255/255.0, green: 127/255.0, blue: 0, alpha: 1)   /// 标题选中颜色
     
     convenience init(_ textNormalColor: UIColor, _ textSelectColor: UIColor, _ backColor: UIColor){

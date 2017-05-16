@@ -24,6 +24,7 @@
 		18E8C2C51EC19C3600187F97 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C41EC19C3600187F97 /* Discover.storyboard */; };
 		18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2C61EC19C3E00187F97 /* Profile.storyboard */; };
 		18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2CB1EC1A79700187F97 /* Constant.swift */; };
+		18EB047E1EC93BB000D9AB1E /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB047D1EC93BB000D9AB1E /* UIImage+extension.swift */; };
 		18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F325561EC29A980014AF77 /* UIColor+extension.swift */; };
 		18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */; };
 		18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADF1EC43880009B7FDC /* BaseViewController.swift */; };
@@ -83,6 +84,7 @@
 		18E8C2C41EC19C3600187F97 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		18E8C2C61EC19C3E00187F97 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		18E8C2CB1EC1A79700187F97 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		18EB047D1EC93BB000D9AB1E /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
 		18F325561EC29A980014AF77 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18F46ADF1EC43880009B7FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				18F325561EC29A980014AF77 /* UIColor+extension.swift */,
+				18EB047D1EC93BB000D9AB1E /* UIImage+extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				TargetAttributes = {
 					18E8C2851EC1993C00187F97 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8H7F74M4AY;
 						ProvisioningStyle = Automatic;
 					};
 					18E8C2991EC1993C00187F97 = {
@@ -574,6 +578,7 @@
 				18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */,
 				18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */,
 				18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */,
+				18EB047E1EC93BB000D9AB1E /* UIImage+extension.swift in Sources */,
 				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,
 				18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */,
 			);
@@ -729,6 +734,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8H7F74M4AY;
 				INFOPLIST_FILE = ZFLiveStreaming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -744,6 +750,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8H7F74M4AY;
 				INFOPLIST_FILE = ZFLiveStreaming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

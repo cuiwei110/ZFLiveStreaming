@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let KMAINCOLOR: UIColor = #colorLiteral(red: 0.2546484768, green: 0.2665711939, blue: 0.5550796986, alpha: 1)
+let KMAINCOLOR: UIColor = UIColor(hex: "#121314")!
 
 let KSCREEN_W: CGFloat = UIScreen.main.bounds.width
 let KSCREEN_H: CGFloat = UIScreen.main.bounds.height

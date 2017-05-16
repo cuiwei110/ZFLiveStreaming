@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         addChildVC("Rank")
         addChildVC("Discover")
         addChildVC("Profile")
-       
+        tabBar.barTintColor = KMAINCOLOR
     }
 
 

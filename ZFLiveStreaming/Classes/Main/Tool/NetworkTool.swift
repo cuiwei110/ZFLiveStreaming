@@ -24,7 +24,10 @@ class NetworkTool {
      func request(url: String, method: requestMethod , parameters:[String: Any]?, completion:  @escaping NetworkCompletion){
         let getOrPost = method.rawValue
         Alamofire.request(url, method: getOrPost == 0 ? .get : .post, parameters: parameters).responseJSON { responseJSON in
+
             let result = responseJSON.result
+            // result 枚举中有 存JSON的result.value 和 成功与否的error/isSuccess
+            
             guard let resultDict = result.value else {
                 completion(nil, result.error)
                 return

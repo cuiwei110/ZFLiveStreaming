@@ -42,7 +42,6 @@ extension ZFPageView {
                                     height: titleStyle.titleViewHeight),
                                     style: titleStyle,
                                     titles: titles)
-        titleView.backgroundColor = UIColor.green
         addSubview(titleView)
         
         //内容

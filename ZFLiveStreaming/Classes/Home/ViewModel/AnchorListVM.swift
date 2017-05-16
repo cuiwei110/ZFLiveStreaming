@@ -16,6 +16,7 @@ class AnchorListVM: NSObject {
 
 //MARK:- 请求数据
 extension AnchorListVM {
+    
     func loadData(type: HomeType, index: Int, finished: @escaping (_ isSuccess: Bool)->() ) {
         NetworkTool.shareInstance.loadHomeAnchorData(type: type, index: index) { (dict, error) in
             // 错误校验

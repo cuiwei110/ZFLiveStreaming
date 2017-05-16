@@ -66,7 +66,7 @@ extension AnchorViewController {
 }
 
 //MARK:- CollectionView 代理数据源
-extension AnchorViewController: UICollectionViewDelegate, UICollectionViewDataSource,ZFWaterfallDataSource {
+extension AnchorViewController: UICollectionViewDelegate, UICollectionViewDataSource,  ZFWaterfallDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return anchorListVM.anchorVMs.count
@@ -74,19 +74,25 @@ extension AnchorViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! AnchorCell
-        cell.anchorViewModel = anchorListVM.anchorVMs[indexPath.item]
+         cell.anchorViewModel = anchorListVM.anchorVMs[indexPath.item]
 
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, _ heightOfIndexPath: IndexPath) -> CGFloat {
         return heightOfIndexPath.item % 2 == 0 ? KSCREEN_W * 2 / 3 : KSCREEN_W / 2
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+       navigationController?.navigationBar.endEditing(true)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    }
+    
     
 }
 
