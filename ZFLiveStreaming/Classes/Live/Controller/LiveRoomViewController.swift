@@ -45,7 +45,7 @@ extension LiveRoomViewController {
 }
 
 //MARK:- 事件响应
-extension LiveRoomViewController {
+extension LiveRoomViewController: EmitterAnimate {
     
     @IBAction func closeClick(_ sender: Any) {
       _ = navigationController?.popViewController(animated: true)
@@ -59,6 +59,30 @@ extension LiveRoomViewController {
     }
     
     @IBAction func bottomBtnsClick(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            print("聊天")
+        case 1:
+            print("分享")
+        case 2:
+            print("礼物")
+        case 3:
+            print("更多")
+        case 4:
+            switchEmitter(sender)
+        default:
+            print("未处理按钮")
+        
+        }
+    }
+    private func switchEmitter(_ button: UIButton) {
+        button.isSelected = !button.isSelected
+        if button.isSelected {
+            startEmitter(CGPoint(x:button.center.x , y: view.bounds.height - button.bounds.height))
+        }else {
+            stopEmitter()
+        }
+
     }
     
 }

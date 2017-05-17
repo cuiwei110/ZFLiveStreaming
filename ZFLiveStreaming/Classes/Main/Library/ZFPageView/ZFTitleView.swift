@@ -17,7 +17,7 @@ class ZFTitleView: UIView {
     fileprivate var style = ZFPageStyle()
     fileprivate var titles: [String]
     fileprivate var titleLabels = [ZFTitleLabel]()
-    fileprivate var selectIndex = 0 {
+    var selectIndex = 0 {
         didSet {
             if (oldValue == selectIndex) { return }
             titleLabels[oldValue].select = false
@@ -60,8 +60,9 @@ extension ZFTitleView {
 
     }
     private func setupScroll() {
-
+        
         scrollView.backgroundColor = style.titleViewBackColor
+        scrollView.isScrollEnabled = style.scrollEnabled
         addSubview(scrollView)
     }
     
@@ -78,19 +79,42 @@ extension ZFTitleView {
     
     /// 布局
     private func setupLabelsFrame() {
-        var labelX: CGFloat = style.titleMargin
+        let labelMargin = style.titleMargin
+        var labelX: CGFloat = labelMargin
+        
         for (i, label) in titleLabels.enumerated() {
-            let titleWidth = (label.text! as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: style.titleFont], context: nil).width
+            if style.scrollEnabled {
+                let titleWidth = (label.text! as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: style.titleFont], context: nil).width
+                
+                let rect = CGRect(x: labelX, y: 0, width: titleWidth, height: bounds.height)
+                labelX += titleWidth + labelMargin
+                label.frame = rect
+            }else {
+                let labelW: CGFloat = bounds.width / CGFloat(titleLabels.count)
+                let rect = CGRect(x: labelW * CGFloat(i), y: 0, width: labelW, height: bounds.height)
+                label.frame = rect
+            }
+      
             
-            let rect = CGRect(x: labelX, y: 0, width: titleWidth, height: bounds.height)
-            labelX += titleWidth + style.titleMargin
-            label.frame = rect
             
             if i == titles.count - 1 {
-                scrollView.contentSize = CGSize(width: label.frame.maxX + style.titleMargin, height: bounds.height)
+                scrollView.contentSize = CGSize(width: label.frame.maxX + labelMargin, height: bounds.height)
             }
             
         }
+//        //如果标题总长度不足屏幕宽,调整到居中
+//        if scrollView.contentSize.width < bounds.width {
+//            scrollView.isScrollEnabled = false
+//            let newFirstLabelX = (bounds.width + labelMargin - titleLabels.last!.frame.maxX) * 0.5
+//            var newLabelX = newFirstLabelX
+//            for label in titleLabels {
+//                let labelW = label.bounds.width
+//                let rect = CGRect(x: newLabelX, y: 0, width: labelW, height: bounds.height)
+//                label.frame = rect
+//                newLabelX += labelW + labelMargin
+//            }
+//        }
+        
         titleLabels[0].select = true // 第一个选中
     }
     
@@ -108,14 +132,16 @@ extension ZFTitleView {
     }
     
     fileprivate func setScrollInset(_ label: UILabel){
+        guard scrollView.isScrollEnabled else { return }
         let labelX = label.center.x
         var offsetX = labelX - bounds.width / 2
-        if offsetX < 0 {
-            offsetX = 0
-        }
+      
         let maxOffset = scrollView.contentSize.width - bounds.width
         if offsetX > maxOffset {
             offsetX = maxOffset
+        }
+        if offsetX < 0 {
+            offsetX = 0
         }
         scrollView.setContentOffset(CGPoint(x: offsetX, y: 0), animated: true)
     }
@@ -127,6 +153,8 @@ extension ZFTitleView: ZFContentViewDelegate {
         selectIndex = Index
         //调整位置
         setScrollInset(titleLabels[selectIndex])
+     
+      
         
     }
     func contentView(_ contentView: ZFContentView, targetIndex: Int, progress: CGFloat) {

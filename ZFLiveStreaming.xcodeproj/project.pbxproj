@@ -28,15 +28,17 @@
 		18EB04D81ECA976600D9AB1E /* LiveRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB04D61ECA976600D9AB1E /* LiveRoomViewController.swift */; };
 		18EB04D91ECA976600D9AB1E /* LiveRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18EB04D71ECA976600D9AB1E /* LiveRoomViewController.xib */; };
 		18EB04DC1ECAA38D00D9AB1E /* EmitterAnimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB04DB1ECAA38D00D9AB1E /* EmitterAnimate.swift */; };
+		18EB057C1ECC510B00D9AB1E /* ZFContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05751ECC510B00D9AB1E /* ZFContentView.swift */; };
+		18EB057D1ECC510B00D9AB1E /* ZFPageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05761ECC510B00D9AB1E /* ZFPageCollectionView.swift */; };
+		18EB057E1ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05771ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift */; };
+		18EB057F1ECC510B00D9AB1E /* ZFPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05781ECC510B00D9AB1E /* ZFPageStyle.swift */; };
+		18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05791ECC510B00D9AB1E /* ZFPageView.swift */; };
+		18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */; };
+		18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB057B1ECC510B00D9AB1E /* ZFTitleView.swift */; };
 		18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F325561EC29A980014AF77 /* UIColor+extension.swift */; };
 		18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */; };
 		18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADF1EC43880009B7FDC /* BaseViewController.swift */; };
 		18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE01EC43880009B7FDC /* MainTabBarController.swift */; };
-		18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE61EC43924009B7FDC /* ZFContentView.swift */; };
-		18F46AEC1EC43924009B7FDC /* ZFPageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */; };
-		18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE81EC43924009B7FDC /* ZFPageView.swift */; };
-		18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */; };
-		18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */; };
 		18F46B2E1EC466A9009B7FDC /* ZFWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B2D1EC466A9009B7FDC /* ZFWaterfallLayout.swift */; };
 		18F46B311EC46D01009B7FDC /* types.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18F46B301EC46D01009B7FDC /* types.plist */; };
 		18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B351EC46D78009B7FDC /* HomeType.swift */; };
@@ -91,15 +93,17 @@
 		18EB04D61ECA976600D9AB1E /* LiveRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveRoomViewController.swift; sourceTree = "<group>"; };
 		18EB04D71ECA976600D9AB1E /* LiveRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveRoomViewController.xib; sourceTree = "<group>"; };
 		18EB04DB1ECAA38D00D9AB1E /* EmitterAnimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmitterAnimate.swift; sourceTree = "<group>"; };
+		18EB05751ECC510B00D9AB1E /* ZFContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFContentView.swift; sourceTree = "<group>"; };
+		18EB05761ECC510B00D9AB1E /* ZFPageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageCollectionView.swift; sourceTree = "<group>"; };
+		18EB05771ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageCollectionViewLayout.swift; sourceTree = "<group>"; };
+		18EB05781ECC510B00D9AB1E /* ZFPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageStyle.swift; sourceTree = "<group>"; };
+		18EB05791ECC510B00D9AB1E /* ZFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageView.swift; sourceTree = "<group>"; };
+		18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleLabel.swift; sourceTree = "<group>"; };
+		18EB057B1ECC510B00D9AB1E /* ZFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleView.swift; sourceTree = "<group>"; };
 		18F325561EC29A980014AF77 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18F46ADF1EC43880009B7FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		18F46AE01EC43880009B7FDC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		18F46AE61EC43924009B7FDC /* ZFContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFContentView.swift; sourceTree = "<group>"; };
-		18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageStyle.swift; sourceTree = "<group>"; };
-		18F46AE81EC43924009B7FDC /* ZFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageView.swift; sourceTree = "<group>"; };
-		18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleLabel.swift; sourceTree = "<group>"; };
-		18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleView.swift; sourceTree = "<group>"; };
 		18F46B2D1EC466A9009B7FDC /* ZFWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFWaterfallLayout.swift; sourceTree = "<group>"; };
 		18F46B301EC46D01009B7FDC /* types.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = types.plist; sourceTree = "<group>"; };
 		18F46B351EC46D78009B7FDC /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
@@ -323,6 +327,20 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		18EB05741ECC510B00D9AB1E /* ZFPageView */ = {
+			isa = PBXGroup;
+			children = (
+				18EB05791ECC510B00D9AB1E /* ZFPageView.swift */,
+				18EB05761ECC510B00D9AB1E /* ZFPageCollectionView.swift */,
+				18EB05771ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift */,
+				18EB057B1ECC510B00D9AB1E /* ZFTitleView.swift */,
+				18EB05751ECC510B00D9AB1E /* ZFContentView.swift */,
+				18EB05781ECC510B00D9AB1E /* ZFPageStyle.swift */,
+				18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */,
+			);
+			path = ZFPageView;
+			sourceTree = "<group>";
+		};
 		18F325551EC29A840014AF77 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,21 +363,9 @@
 		18F46AE41EC4391D009B7FDC /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				18F46AE51EC43924009B7FDC /* ZFPageView */,
+				18EB05741ECC510B00D9AB1E /* ZFPageView */,
 			);
 			path = Library;
-			sourceTree = "<group>";
-		};
-		18F46AE51EC43924009B7FDC /* ZFPageView */ = {
-			isa = PBXGroup;
-			children = (
-				18F46AE81EC43924009B7FDC /* ZFPageView.swift */,
-				18F46AEA1EC43924009B7FDC /* ZFTitleView.swift */,
-				18F46AE61EC43924009B7FDC /* ZFContentView.swift */,
-				18F46AE91EC43924009B7FDC /* ZFTitleLabel.swift */,
-				18F46AE71EC43924009B7FDC /* ZFPageStyle.swift */,
-			);
-			path = ZFPageView;
 			sourceTree = "<group>";
 		};
 		18F46B2C1EC466A1009B7FDC /* View */ = {
@@ -622,24 +628,26 @@
 				18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */,
 				1814C0561EC5AF57000DF9CA /* AnchorCell.swift in Sources */,
 				1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */,
+				18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */,
 				18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */,
+				18EB057E1ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift in Sources */,
+				18EB057D1ECC510B00D9AB1E /* ZFPageCollectionView.swift in Sources */,
+				18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */,
 				18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */,
+				18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */,
 				1814C04D1EC54BF2000DF9CA /* AnchorVM.swift in Sources */,
-				18F46AEC1EC43924009B7FDC /* ZFPageStyle.swift in Sources */,
 				18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */,
+				18EB057F1ECC510B00D9AB1E /* ZFPageStyle.swift in Sources */,
 				18EB04DC1ECAA38D00D9AB1E /* EmitterAnimate.swift in Sources */,
 				18F46B391EC46DFE009B7FDC /* HomeViewController.swift in Sources */,
 				1814C04B1EC54BDF000DF9CA /* AnchorListVM.swift in Sources */,
+				18EB057C1ECC510B00D9AB1E /* ZFContentView.swift in Sources */,
 				18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */,
 				1814C0501EC551E3000DF9CA /* NetworkTool.swift in Sources */,
 				18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */,
-				18F46AEF1EC43924009B7FDC /* ZFTitleView.swift in Sources */,
-				18F46AEE1EC43924009B7FDC /* ZFTitleLabel.swift in Sources */,
-				18F46AEB1EC43924009B7FDC /* ZFContentView.swift in Sources */,
 				18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */,
 				18EB047E1EC93BB000D9AB1E /* UIImage+extension.swift in Sources */,
 				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,
-				18F46AED1EC43924009B7FDC /* ZFPageView.swift in Sources */,
 				18EB04D81ECA976600D9AB1E /* LiveRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
