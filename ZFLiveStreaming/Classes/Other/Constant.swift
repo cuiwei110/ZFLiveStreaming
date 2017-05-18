@@ -15,7 +15,7 @@ let KSCREEN_W: CGFloat = UIScreen.main.bounds.width
 let KSCREEN_H: CGFloat = UIScreen.main.bounds.height
 
 // 控件尺寸
-let KEmotionViewH: CGFloat = 206
+let KEmotionViewH: CGFloat = 216
 let KChatToolViewH: CGFloat = 44
 
 // 网络 URL

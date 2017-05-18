@@ -53,6 +53,7 @@ extension LiveRoomViewController {
     private func setupChatView() {
         chatToolView.frame = CGRect(x: 0, y: KSCREEN_H, width: KSCREEN_W, height: KChatToolViewH)
         chatToolView.autoresizingMask = [.flexibleTopMargin,.flexibleBottomMargin, .flexibleLeftMargin , .flexibleRightMargin]
+        chatToolView.delegate = self
         view.addSubview(chatToolView)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
@@ -91,13 +92,18 @@ extension LiveRoomViewController: EmitterAnimate {
         }
     }
   
-    
-    
-    
 }
 
-//MARK:- 事件响应
-extension LiveRoomViewController {
+
+
+//MARK:- 点击事件响应
+extension LiveRoomViewController: ChatToolViewDelegate {
+    // 聊天框点击发送
+    func toolViewSendClick(_ toolView: ChatToolView, _ message: String) {
+        print(message)
+    }
+    
+    
     // 粒子效果开启关闭
     fileprivate func switchEmitter(_ button: UIButton) {
         button.isSelected = !button.isSelected
@@ -107,6 +113,7 @@ extension LiveRoomViewController {
             stopEmitter()
         }
     }
+    
     // 键盘变化
     @objc fileprivate func keyboardWillChangeFrame(_ note: NSNotification) {
         
@@ -121,7 +128,6 @@ extension LiveRoomViewController {
         }
         
     }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         chatToolView.inputTextField.resignFirstResponder()
     }

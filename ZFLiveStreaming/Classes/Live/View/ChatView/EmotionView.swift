@@ -9,10 +9,12 @@
 import UIKit
 private let KEmotionCell = "KEmotionCell"
 class EmotionView: UIView {
-
+    var emotionClicked : ((Emotion) -> ())?
+    fileprivate var emotionPackages = [EmotionPacage]()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        loadEmotionData()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -24,37 +26,54 @@ class EmotionView: UIView {
 //MARK:- 设置UI
 extension EmotionView {
     fileprivate func setupUI() {
-        let titles = ["土豪","你好","跑车","鲜花"]
+        let titles = ["普通","粉丝专属"]
         let style = ZFPageStyle()
+        style.scrollEnabled = false
         let layout = ZFPageCollectionViewLayout()
         layout.cols = 7
         layout.rows = 3
-        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
         let pageCollectionView = ZFPageCollectionView(frame: bounds,
                                             titles: titles,
                                             style: style,
                                             isTitleInTop: false,
                                             layout: layout)
         pageCollectionView.dataSource = self
-        pageCollectionView.register(cellClass: UICollectionViewCell.self, identifier: KEmotionCell)
+        pageCollectionView.delegate = self
+        pageCollectionView.register(cellClass: EmotionCell.self, identifier: KEmotionCell)
         addSubview(pageCollectionView)
+    }
+}
+
+//MARK:- 读取数据
+extension EmotionView {
+    fileprivate func loadEmotionData() {
+        emotionPackages = EmotionViewModel.shareInstance.emotionPackages
     }
 }
 
 //MARK:- 数据源
 extension EmotionView: ZFPageCollectionViewDataSource {
     func numberOfSections(in collectionView: ZFPageCollectionView) -> Int {
-        return 4
+        return emotionPackages.count
     }
     func collectionView(_ collectionView: ZFPageCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return emotionPackages[section].emotions.count
     }
     func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KEmotionCell, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KEmotionCell, for: indexPath) as! EmotionCell
+        cell.emotion = emotionPackages[indexPath.section].emotions[indexPath.item]
         return cell
     }
-    
+}
+//MARK:- 点击代理
+extension EmotionView : ZFPageCollectionViewDelegate {
+    func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let emotion = emotionPackages[indexPath.section].emotions[indexPath.item]
+        if let emotionClicked = emotionClicked {
+            emotionClicked(emotion)
+        }
+    }
 }
 
 

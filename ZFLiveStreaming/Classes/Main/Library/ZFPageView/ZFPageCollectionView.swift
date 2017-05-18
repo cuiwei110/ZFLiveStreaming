@@ -13,9 +13,13 @@ protocol ZFPageCollectionViewDataSource: class  {
     func collectionView(_ collectionView: ZFPageCollectionView, numberOfItemsInSection section: Int) -> Int
     func collectionView(_ pageCollectionView: ZFPageCollectionView,_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
+@objc protocol ZFPageCollectionViewDelegate: class {
+   @objc optional func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+}
 
 class ZFPageCollectionView: UIView {
     weak var dataSource: ZFPageCollectionViewDataSource?
+    weak var delegate: ZFPageCollectionViewDelegate?
     fileprivate var titles = [String]()
     fileprivate var style: ZFPageStyle
     fileprivate let layout: ZFPageCollectionViewLayout
@@ -48,7 +52,7 @@ extension ZFPageCollectionView {
         titleView = ZFTitleView(frame: titleFrame,
                                     style: style,
                                     titles: titles)
-        titleView.backgroundColor = UIColor.green
+        titleView.backgroundColor = style.titleViewBackColor
         titleView.delegage = self
         addSubview(titleView)
         
@@ -58,14 +62,16 @@ extension ZFPageCollectionView {
         
         pageControl = UIPageControl(frame: CGRect(x: 0, y: pageControlY, width: bounds.width, height: pageControlH))
         pageControl.isEnabled = false
-        pageControl.backgroundColor = UIColor.purple
+        pageControl.pageIndicatorTintColor = UIColor(hex: "#adadaf")
+        pageControl.currentPageIndicatorTintColor = UIColor(hex: "#4a4a4c")
+        pageControl.backgroundColor = style.collectionViewBackColor
         addSubview(pageControl)
         
         //3. collectionView
         let collectionY: CGFloat = isTitleInTop ? titleViewH : 0
         let coFrame = CGRect(x: 0, y: collectionY, width: bounds.width, height: bounds.height - pageControlH - titleViewH)
         collectionView = UICollectionView(frame: coFrame, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.red
+        collectionView.backgroundColor = style.collectionViewBackColor
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -107,9 +113,11 @@ extension ZFPageCollectionView:  UICollectionViewDataSource {
 
 //MARK:- 滑动点击事件响应
 extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
-       func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.collectionView!(self, collectionView, didSelectItemAt: indexPath)
     }
+    
     // 调整PageControl
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         scrollViewEndScroll()
@@ -144,6 +152,8 @@ extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
         updatePageControl(section: selectIndex)
         
     }
+    
+    
     
     // 更新pageControl
     fileprivate func updatePageControl(section: Int) {

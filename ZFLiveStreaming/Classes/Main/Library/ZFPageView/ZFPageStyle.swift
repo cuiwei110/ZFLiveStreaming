@@ -10,7 +10,7 @@ import UIKit
 
 class ZFPageStyle: NSObject {
     var titleViewBackColor = UIColor.white.withAlphaComponent(0.5)    /// 标题视图背景颜色
-
+    var collectionViewBackColor = UIColor(colorLiteralRed: 246/255.0, green: 246/255.0, blue: 248/255.0, alpha: 1)
     var titleViewHeight: CGFloat = 32     /// 标题视图高度
     var scrollEnabled: Bool = true
     var titleFont: UIFont = UIFont.systemFont(ofSize: 15)
