@@ -20,11 +20,7 @@ class ZFPageCollectionView: UIView {
     fileprivate var style: ZFPageStyle
     fileprivate let layout: ZFPageCollectionViewLayout
     fileprivate let isTitleInTop: Bool
-    fileprivate var currentIndexPath = IndexPath(item: 0, section: 0) {
-        didSet {
-            
-        }
-    }
+    fileprivate var currentIndexPath = IndexPath(item: 0, section: 0)
     fileprivate var collectionView: UICollectionView!
     fileprivate var pageControl: UIPageControl!
     fileprivate var titleView: ZFTitleView!
@@ -65,9 +61,7 @@ extension ZFPageCollectionView {
         pageControl.backgroundColor = UIColor.purple
         addSubview(pageControl)
         
-        
         //3. collectionView
-        
         let collectionY: CGFloat = isTitleInTop ? titleViewH : 0
         let coFrame = CGRect(x: 0, y: collectionY, width: bounds.width, height: bounds.height - pageControlH - titleViewH)
         collectionView = UICollectionView(frame: coFrame, collectionViewLayout: layout)
@@ -141,11 +135,6 @@ extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
             titleView.selectIndex = indexPath.section
         }
     }
-    // 更新pageControl
-    fileprivate func updatePageControl(section: Int) {
-        let itemCount =  dataSource?.collectionView(self, numberOfItemsInSection: section) ?? 0
-        pageControl.numberOfPages = (itemCount - 1) / (layout.cols * layout.rows) + 1
-    }
     // 点击了标题
     func titleView(_ titleView: ZFTitleView, didSelected selectIndex: Int) {
         let indexPath = IndexPath(item: 0, section: selectIndex)
@@ -153,17 +142,17 @@ extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
         collectionView.contentOffset.x -= layout.sectionInset.left
         updatePageControl(section: selectIndex)
-    
         
     }
+    
+    // 更新pageControl
+    fileprivate func updatePageControl(section: Int) {
+        let itemCount =  dataSource?.collectionView(self, numberOfItemsInSection: section) ?? 0
+        pageControl.numberOfPages = (itemCount - 1) / (layout.cols * layout.rows) + 1
+    }
+
    
 }
-
-
-
-
-
-
 
 
 

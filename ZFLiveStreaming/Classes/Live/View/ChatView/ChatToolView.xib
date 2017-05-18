@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChatToolView" customModule="ZFLiveStreaming" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkr-Qc-7wh">
+                    <rect key="frame" x="404" y="5" width="60" height="141"/>
+                    <color key="backgroundColor" red="0.89411764705882346" green="0.69803921568627447" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="08r-b9-EJx"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="PPE-To-p9l"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eWm-iS-AQ7">
+                    <rect key="frame" x="5" y="5" width="394" height="141"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="editChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="Zqw-gE-88H"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xkr-Qc-7wh" secondAttribute="trailing" constant="5" id="6Wr-b7-e7X"/>
+                <constraint firstAttribute="bottom" secondItem="xkr-Qc-7wh" secondAttribute="bottom" constant="5" id="7rJ-96-wcz"/>
+                <constraint firstAttribute="bottom" secondItem="eWm-iS-AQ7" secondAttribute="bottom" constant="5" id="MuN-4B-12W"/>
+                <constraint firstItem="eWm-iS-AQ7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="cnp-Q8-925"/>
+                <constraint firstItem="eWm-iS-AQ7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="jRY-2K-g4j"/>
+                <constraint firstItem="xkr-Qc-7wh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="n2Y-7Y-PBv"/>
+                <constraint firstItem="xkr-Qc-7wh" firstAttribute="leading" secondItem="eWm-iS-AQ7" secondAttribute="trailing" constant="5" id="zHb-NW-BG5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="inputTextField" destination="eWm-iS-AQ7" id="1md-OJ-q68"/>
+                <outlet property="sendButton" destination="xkr-Qc-7wh" id="Jmz-7T-KO7"/>
+            </connections>
+            <point key="canvasLocation" x="-1032" y="-337"/>
+        </view>
+    </objects>
+</document>

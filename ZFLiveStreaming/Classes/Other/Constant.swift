@@ -14,7 +14,9 @@ let KMAINCOLOR: UIColor = UIColor(hex: "#121314")!
 let KSCREEN_W: CGFloat = UIScreen.main.bounds.width
 let KSCREEN_H: CGFloat = UIScreen.main.bounds.height
 
-
+// 控件尺寸
+let KEmotionViewH: CGFloat = 206
+let KChatToolViewH: CGFloat = 44
 
 // 网络 URL
 let HOME_Anchor_URL = "http://qf.56.com/home/v4/moreAnchor.ios"

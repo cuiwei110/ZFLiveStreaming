@@ -12,18 +12,23 @@ class LiveRoomViewController: UIViewController {
 
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var avatorImageView: UIImageView!
-    
+    // 聊天工具栏
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    fileprivate lazy var chatToolView:ChatToolView = ChatToolView.loadFromNib()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
         
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -35,16 +40,26 @@ class LiveRoomViewController: UIViewController {
 extension LiveRoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
+        setupChatView()
     }
+    // 背景
     private func setupBlurView() {
         let blur = UIBlurEffect(style: .dark)
         let blurView = UIVisualEffectView(effect: blur)
         blurView.frame = backImageView.bounds
         backImageView.addSubview(blurView)
     }
+    // 聊天工具栏
+    private func setupChatView() {
+        chatToolView.frame = CGRect(x: 0, y: KSCREEN_H, width: KSCREEN_W, height: KChatToolViewH)
+        chatToolView.autoresizingMask = [.flexibleTopMargin,.flexibleBottomMargin, .flexibleLeftMargin , .flexibleRightMargin]
+        view.addSubview(chatToolView)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
 }
 
-//MARK:- 事件响应
+//MARK:- 按钮的触发
 extension LiveRoomViewController: EmitterAnimate {
     
     @IBAction func closeClick(_ sender: Any) {
@@ -61,7 +76,7 @@ extension LiveRoomViewController: EmitterAnimate {
     @IBAction func bottomBtnsClick(_ sender: UIButton) {
         switch sender.tag {
         case 0:
-            print("聊天")
+            chatToolView.inputTextField.becomeFirstResponder()
         case 1:
             print("分享")
         case 2:
@@ -75,18 +90,43 @@ extension LiveRoomViewController: EmitterAnimate {
         
         }
     }
-    private func switchEmitter(_ button: UIButton) {
+  
+    
+    
+    
+}
+
+//MARK:- 事件响应
+extension LiveRoomViewController {
+    // 粒子效果开启关闭
+    fileprivate func switchEmitter(_ button: UIButton) {
         button.isSelected = !button.isSelected
         if button.isSelected {
             startEmitter(CGPoint(x:button.center.x , y: view.bounds.height - button.bounds.height))
         }else {
             stopEmitter()
         }
-
+    }
+    // 键盘变化
+    @objc fileprivate func keyboardWillChangeFrame(_ note: NSNotification) {
+        
+        let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let chatToolY = endFrame.origin.y - KChatToolViewH
+        UIView.animate(withDuration: duration) { 
+            self.chatToolView.frame.origin.y = chatToolY
+        }
+        if endFrame.origin.y >= KSCREEN_H {
+            chatToolView.frame.origin.y = KSCREEN_H
+        }
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        chatToolView.inputTextField.resignFirstResponder()
     }
     
 }
-
 
 
 

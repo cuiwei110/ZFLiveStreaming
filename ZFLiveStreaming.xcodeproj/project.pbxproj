@@ -13,6 +13,9 @@
 		1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814C0521EC59FAE000DF9CA /* AnchorModel.swift */; };
 		1814C0561EC5AF57000DF9CA /* AnchorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814C0541EC5AF57000DF9CA /* AnchorCell.swift */; };
 		1814C0571EC5AF57000DF9CA /* AnchorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1814C0551EC5AF57000DF9CA /* AnchorCell.xib */; };
+		18BF499A1ECD3FEA002DDB7D /* EmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF49991ECD3FEA002DDB7D /* EmotionView.swift */; };
+		18BF499D1ECD4868002DDB7D /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */; };
+		18BF499E1ECD4868002DDB7D /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */; };
 		18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E8C2891EC1993C00187F97 /* AppDelegate.swift */; };
 		18E8C28F1EC1993C00187F97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C28D1EC1993C00187F97 /* Main.storyboard */; };
 		18E8C2911EC1993C00187F97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E8C2901EC1993C00187F97 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB05791ECC510B00D9AB1E /* ZFPageView.swift */; };
 		18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */; };
 		18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB057B1ECC510B00D9AB1E /* ZFTitleView.swift */; };
+		18F295C41ECD2363006086AF /* LoadNibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F295C31ECD2363006086AF /* LoadNibable.swift */; };
+		18F295C91ECD2657006086AF /* ChatToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F295C71ECD2657006086AF /* ChatToolView.xib */; };
+		18F295CB1ECD39F8006086AF /* ChartToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F295CA1ECD39F8006086AF /* ChartToolView.swift */; };
 		18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F325561EC29A980014AF77 /* UIColor+extension.swift */; };
 		18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */; };
 		18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46ADF1EC43880009B7FDC /* BaseViewController.swift */; };
@@ -72,6 +78,9 @@
 		1814C0521EC59FAE000DF9CA /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		1814C0541EC5AF57000DF9CA /* AnchorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorCell.swift; sourceTree = "<group>"; };
 		1814C0551EC5AF57000DF9CA /* AnchorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnchorCell.xib; sourceTree = "<group>"; };
+		18BF49991ECD3FEA002DDB7D /* EmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionView.swift; sourceTree = "<group>"; };
+		18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
+		18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
 		18E8C2861EC1993C00187F97 /* ZFLiveStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFLiveStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E8C2891EC1993C00187F97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18E8C28E1EC1993C00187F97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +109,9 @@
 		18EB05791ECC510B00D9AB1E /* ZFPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFPageView.swift; sourceTree = "<group>"; };
 		18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleLabel.swift; sourceTree = "<group>"; };
 		18EB057B1ECC510B00D9AB1E /* ZFTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFTitleView.swift; sourceTree = "<group>"; };
+		18F295C31ECD2363006086AF /* LoadNibable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadNibable.swift; sourceTree = "<group>"; };
+		18F295C71ECD2657006086AF /* ChatToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatToolView.xib; sourceTree = "<group>"; };
+		18F295CA1ECD39F8006086AF /* ChartToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartToolView.swift; sourceTree = "<group>"; };
 		18F325561EC29A980014AF77 /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		18F46ADE1EC43880009B7FDC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		18F46ADF1EC43880009B7FDC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +320,7 @@
 		18EB04D41ECA974100D9AB1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18F295C51ECD2657006086AF /* ChatView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				18EB04DB1ECAA38D00D9AB1E /* EmitterAnimate.swift */,
+				18F295C31ECD2363006086AF /* LoadNibable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -339,6 +353,16 @@
 				18EB057A1ECC510B00D9AB1E /* ZFTitleLabel.swift */,
 			);
 			path = ZFPageView;
+			sourceTree = "<group>";
+		};
+		18F295C51ECD2657006086AF /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				18F295CA1ECD39F8006086AF /* ChartToolView.swift */,
+				18F295C71ECD2657006086AF /* ChatToolView.xib */,
+				18BF49991ECD3FEA002DDB7D /* EmotionView.swift */,
+			);
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 		18F325551EC29A840014AF77 /* Extension */ = {
@@ -383,6 +407,8 @@
 			isa = PBXGroup;
 			children = (
 				18F46B301EC46D01009B7FDC /* types.plist */,
+				18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */,
+				18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -543,12 +569,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E8C2C31EC19C1700187F97 /* Rank.storyboard in Resources */,
+				18BF499E1ECD4868002DDB7D /* QHSohuGifSort.plist in Resources */,
 				18EB04D91ECA976600D9AB1E /* LiveRoomViewController.xib in Resources */,
 				18EB04D01ECA96DF00D9AB1E /* Home.storyboard in Resources */,
 				18E8C2941EC1993C00187F97 /* LaunchScreen.storyboard in Resources */,
 				18F46B311EC46D01009B7FDC /* types.plist in Resources */,
+				18F295C91ECD2657006086AF /* ChatToolView.xib in Resources */,
 				18E8C2911EC1993C00187F97 /* Assets.xcassets in Resources */,
 				18E8C28F1EC1993C00187F97 /* Main.storyboard in Resources */,
+				18BF499D1ECD4868002DDB7D /* QHNormalEmotionSort.plist in Resources */,
 				18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */,
 				1814C0571EC5AF57000DF9CA /* AnchorCell.xib in Resources */,
 				18E8C2C51EC19C3600187F97 /* Discover.storyboard in Resources */,
@@ -630,9 +659,12 @@
 				1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */,
 				18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */,
 				18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */,
+				18BF499A1ECD3FEA002DDB7D /* EmotionView.swift in Sources */,
 				18EB057E1ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift in Sources */,
+				18F295C41ECD2363006086AF /* LoadNibable.swift in Sources */,
 				18EB057D1ECC510B00D9AB1E /* ZFPageCollectionView.swift in Sources */,
 				18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */,
+				18F295CB1ECD39F8006086AF /* ChartToolView.swift in Sources */,
 				18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */,
 				18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */,
 				1814C04D1EC54BF2000DF9CA /* AnchorVM.swift in Sources */,

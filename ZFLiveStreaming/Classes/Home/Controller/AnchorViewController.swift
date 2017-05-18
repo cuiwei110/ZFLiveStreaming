@@ -81,7 +81,7 @@ extension AnchorViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let roomVC = LiveRoomViewController()
-        
+        roomVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(roomVC, animated: true)
         
     }
