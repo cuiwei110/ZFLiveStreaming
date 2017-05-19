@@ -48,6 +48,15 @@ extension NetworkTool {
                           "size": 48] as [String : Any]
         request(url: urlString, method: .GET, parameters: parameters, completion: completion)
     }
+    
+    /// 加载礼物数据
+    func loadGiftData(type: Int, page: Int, rows: Int, _ completion: @escaping NetworkCompletion) {
+        let urlString = GIFT_Data_URL
+        let parameters = ["type": type,
+                          "page": page,
+                          "rows": rows]
+        request(url: urlString, method: .GET, parameters: parameters, completion: completion)
+    }
 }
 
 

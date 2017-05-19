@@ -8,10 +8,10 @@
 
 import UIKit
 
-protocol ZFPageCollectionViewDataSource: class  {
+@objc protocol ZFPageCollectionViewDataSource: class  {
     func numberOfSections(in collectionView: ZFPageCollectionView) -> Int
     func collectionView(_ collectionView: ZFPageCollectionView, numberOfItemsInSection section: Int) -> Int
-    func collectionView(_ pageCollectionView: ZFPageCollectionView,_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+   @objc optional func collectionView(_ pageCollectionView: ZFPageCollectionView,_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
 }
 @objc protocol ZFPageCollectionViewDelegate: class {
    @objc optional func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
@@ -62,8 +62,8 @@ extension ZFPageCollectionView {
         
         pageControl = UIPageControl(frame: CGRect(x: 0, y: pageControlY, width: bounds.width, height: pageControlH))
         pageControl.isEnabled = false
-        pageControl.pageIndicatorTintColor = UIColor(hex: "#adadaf")
-        pageControl.currentPageIndicatorTintColor = UIColor(hex: "#4a4a4c")
+        pageControl.pageIndicatorTintColor = style.pageIndicatorTintColor
+        pageControl.currentPageIndicatorTintColor = style.currentPageIndicatorTintColor
         pageControl.backgroundColor = style.collectionViewBackColor
         addSubview(pageControl)
         
@@ -88,7 +88,9 @@ extension ZFPageCollectionView {
     func register(nib: UINib?, identifier: String){
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
     }
-
+    func reloadData() {
+        collectionView.reloadData()
+    }
 }
 
 //MARK:- 数据源
@@ -106,7 +108,7 @@ extension ZFPageCollectionView:  UICollectionViewDataSource {
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        return dataSource?.collectionView(self, collectionView, cellForItemAt: indexPath) ?? UICollectionViewCell()
+        return dataSource?.collectionView!(self, collectionView, cellForItemAt: indexPath) ?? UICollectionViewCell()
     }
 
 }

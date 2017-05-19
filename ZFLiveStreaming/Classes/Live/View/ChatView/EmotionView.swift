@@ -29,6 +29,8 @@ extension EmotionView {
         let titles = ["普通","粉丝专属"]
         let style = ZFPageStyle()
         style.scrollEnabled = false
+        style.pageIndicatorTintColor = UIColor(hex: "#adadaf")
+        style.currentPageIndicatorTintColor = UIColor(hex: "#4a4a4c")
         let layout = ZFPageCollectionViewLayout()
         layout.cols = 7
         layout.rows = 3

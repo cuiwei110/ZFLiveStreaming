@@ -13,10 +13,13 @@ class LiveRoomViewController: UIViewController {
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var avatorImageView: UIImageView!
     // 聊天工具栏
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
     fileprivate lazy var chatToolView:ChatToolView = ChatToolView.loadFromNib()
+    // 送礼物视图
+    fileprivate lazy var giftView: GiftView = {
+        let giftView = GiftView.loadFromNib()
+        giftView.frame = CGRect(x: 0, y: KSCREEN_H, width: KSCREEN_W, height: kGiftViewH)
+        return giftView
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +27,10 @@ class LiveRoomViewController: UIViewController {
         
 
     }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
@@ -58,6 +65,7 @@ extension LiveRoomViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
+    
 }
 
 //MARK:- 按钮的触发
@@ -81,7 +89,7 @@ extension LiveRoomViewController: EmitterAnimate {
         case 1:
             print("分享")
         case 2:
-            print("礼物")
+            showGiftView()
         case 3:
             print("更多")
         case 4:
@@ -89,6 +97,12 @@ extension LiveRoomViewController: EmitterAnimate {
         default:
             print("未处理按钮")
         
+        }
+    }
+    private func showGiftView() {
+        view.addSubview(giftView)
+        UIView.animate(withDuration: 0.25) { 
+            self.giftView.frame.origin.y = KSCREEN_H - kGiftViewH
         }
     }
   
@@ -130,6 +144,9 @@ extension LiveRoomViewController: ChatToolViewDelegate {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         chatToolView.inputTextField.resignFirstResponder()
+        UIView.animate(withDuration: 0.25) { 
+            self.giftView.frame.origin.y = KSCREEN_H
+        }
     }
     
 }
