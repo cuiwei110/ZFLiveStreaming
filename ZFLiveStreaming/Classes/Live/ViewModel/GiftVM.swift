@@ -1,16 +1,16 @@
 //
-//  GiftViewModel.swift
+//  GiftVM.swift
 //  ZFLiveStreaming
 //
 //  Created by 周正飞 on 17/5/19.
 //  Copyright © 2017年 周正飞. All rights reserved.
 //
 
-import Foundation
-class GiftViewModel {
-    
+import UIKit
+class GiftVM {
+ 
     lazy var giftListData:[GiftPackage] = [GiftPackage]()
-    
+ 
     func loadGiftListData(finished: @escaping (_ isSuccess:Bool) -> ()) {
         NetworkTool.shareInstance.loadGiftData(type: 0, page: 1, rows: 150) { (dict, error) in
             guard  error == nil else {
@@ -28,8 +28,6 @@ class GiftViewModel {
             }
             self.giftListData =  self.giftListData.filter({ $0.t != 0 }).sorted(by: {return $0.t > $1.t})
             finished(true)
-            
-            
         }
     }
     

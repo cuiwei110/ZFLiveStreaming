@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let KMAINCOLOR: UIColor = UIColor(hex: "#121314")!
+let KMAINButtonColor: UIColor = UIColor(hex: "#e4b23f")!
 
 let KSCREEN_W: CGFloat = UIScreen.main.bounds.width
 let KSCREEN_H: CGFloat = UIScreen.main.bounds.height

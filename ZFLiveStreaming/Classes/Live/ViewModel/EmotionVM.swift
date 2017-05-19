@@ -1,5 +1,5 @@
 //
-//  EmotionViewModel.swift
+//  EmotionVM.swift
 //  ZFLiveStreaming
 //
 //  Created by 周正飞 on 17/5/18.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
-class EmotionViewModel {
-    static let shareInstance = EmotionViewModel()
+class EmotionVM {
+    static let shareInstance = EmotionVM()
     var emotionPackages: [EmotionPacage] = [EmotionPacage]()
     
     private init() {

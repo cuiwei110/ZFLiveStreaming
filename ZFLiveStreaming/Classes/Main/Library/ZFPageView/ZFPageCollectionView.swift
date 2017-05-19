@@ -141,6 +141,7 @@ extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
         if currentIndexPath.section != indexPath.section {
             currentIndexPath = indexPath
             updatePageControl(section: indexPath.section)
+            pageControl.currentPage = indexPath.item / (layout.cols * layout.rows)
             //改变titleView
             titleView.selectIndex = indexPath.section
         }

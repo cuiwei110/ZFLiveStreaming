@@ -10,7 +10,7 @@ import Foundation
 class GiftPackage: NSObject {
     var t: Int = 0
     var title: String = ""
-    var list: [GiftModel] = [GiftModel]()
+    var list: [GiftPackageVM] = [GiftPackageVM]()
     
     init(dict: [String: Any]) {
         super.init()
@@ -20,7 +20,8 @@ class GiftPackage: NSObject {
         if key == "list" {
             if let listArr = value as? [[String : Any]] {
                 for listDict in listArr {
-                    list.append(GiftModel(dict: listDict))
+                    let giftModel = GiftModel(dict: listDict)
+                    list.append(GiftPackageVM(giftModel: giftModel))
                 }
             }
         }else {

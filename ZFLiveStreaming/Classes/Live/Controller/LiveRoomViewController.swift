@@ -18,13 +18,13 @@ class LiveRoomViewController: UIViewController {
     fileprivate lazy var giftView: GiftView = {
         let giftView = GiftView.loadFromNib()
         giftView.frame = CGRect(x: 0, y: KSCREEN_H, width: KSCREEN_W, height: kGiftViewH)
+        giftView.delegate = self
         return giftView
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
-        
 
     }
     deinit {
@@ -111,10 +111,15 @@ extension LiveRoomViewController: EmitterAnimate {
 
 
 //MARK:- 点击事件响应
-extension LiveRoomViewController: ChatToolViewDelegate {
+extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
+    
     // 聊天框点击发送
     func toolViewSendClick(_ toolView: ChatToolView, _ message: String) {
         print(message)
+    }
+    // 发送了礼物
+    func sendGift(giftView: GiftView, giftModel: GiftModel) {
+        print(giftModel.subject)
     }
     
     

@@ -10,14 +10,7 @@ import Foundation
 class GiftModel: NSObject {
     var img2: String = "" //图片
     var coin: Int = 0 //价格
-    var subject: String = "" { //标题
-        didSet {
-            if subject.contains("(有声)") {
-                subject = subject.replacingOccurrences(of: "(有声)", with: "")
-            }
-        }
-        
-    }
+    var subject: String = "" // 标题
     init(dict: [String : Any]) {
         super.init()
         setValuesForKeys(dict)

@@ -8,20 +8,24 @@
 
 import UIKit
 private let KGiftCell = "KGiftCell"
-class GiftView: UIView,LoadNibable {
+protocol GiftViewDelegate: class {
+    func sendGift(giftView: GiftView, giftModel: GiftModel)
+}
 
+
+class GiftView: UIView,LoadNibable {
+    weak var delegate: GiftViewDelegate?
+    
     @IBOutlet weak var pageCollectionView: UIView!
     
     @IBOutlet weak var balanceLabel: UILabel!
     
     @IBOutlet weak var sendGiftBtn: UIButton!
     fileprivate var collectionView: ZFPageCollectionView!
+    fileprivate var giftVM = GiftVM()
+    fileprivate var currentIndexPath: IndexPath?
     
-    fileprivate var giftViewModel = GiftViewModel()
     
-    @IBAction func sendGiftClick(_ sender: UIButton) {
-        
-    }
     override func awakeFromNib() {
         super.awakeFromNib()
         loadData()
@@ -40,6 +44,8 @@ extension GiftView {
         layout.sectionInset = UIEdgeInsetsMake(10, 10, 0, 10)
         layout.cols = 4
         layout.rows = 2
+        layout.minimumLineSpacing = 3
+        layout.minimumInteritemSpacing = 3
         var frame = pageCollectionView.bounds
         frame.size.width = KSCREEN_W
         frame.size.height = kGiftViewH - 30 - 30
@@ -51,7 +57,7 @@ extension GiftView {
        
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(cellClass: UICollectionViewCell.self, identifier: KGiftCell)
+        collectionView.register(nib: UINib(nibName: "GiftCollectionCell", bundle: nil), identifier: KGiftCell)
         pageCollectionView.addSubview(collectionView)
        
     }
@@ -59,7 +65,7 @@ extension GiftView {
 //MARK:- 请求数据
 extension GiftView {
     fileprivate func loadData() {
-        giftViewModel.loadGiftListData { (isSuccess) in
+        giftVM.loadGiftListData { (isSuccess) in
             if isSuccess {
                 self.collectionView.reloadData()
             }
@@ -71,27 +77,34 @@ extension GiftView {
 //MARK:- collectionView数据源
 extension GiftView : ZFPageCollectionViewDataSource {
     func numberOfSections(in collectionView: ZFPageCollectionView) -> Int {
-        return giftViewModel.giftListData.count
+        return giftVM.giftListData.count
     }
     func collectionView(_ collectionView: ZFPageCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return giftViewModel.giftListData[section].list.count
+        return giftVM.giftListData[section].list.count
     }
    
     func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGiftCell, for: indexPath)
-        cell.backgroundColor = UIColor.randomColor()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KGiftCell, for: indexPath) as! GiftCollectionCell
+        cell.giftPackeVM = giftVM.giftListData[indexPath.section].list[indexPath.row]
         return cell
     }
-    func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
+    
 }
 
 //MARK:- collectionView代理
 extension GiftView: ZFPageCollectionViewDelegate {
-    
+    func collectionView(_ pageCollectionView: ZFPageCollectionView, _ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentIndexPath = indexPath
+        sendGiftBtn.isEnabled = true
+    }
 }
-
+//MARK:- 点击事件
+extension GiftView {
+    @IBAction func sendGiftClick(_ sender: UIButton) {
+        let giftModel = giftVM.giftListData[currentIndexPath!.section].list[currentIndexPath!.row].giftModel
+        delegate?.sendGift(giftView: self, giftModel: giftModel)
+    }
+}
 
 
 
