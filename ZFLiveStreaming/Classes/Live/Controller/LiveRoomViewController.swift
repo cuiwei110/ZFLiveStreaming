@@ -12,6 +12,14 @@ class LiveRoomViewController: UIViewController {
 
     @IBOutlet weak var backImageView: UIImageView!
     @IBOutlet weak var avatorImageView: UIImageView!
+    fileprivate lazy var socket: ZFSocket = {
+        let socket = ZFSocket(addr: "0.0.0.0", port: 7878)
+        socket.connectServer()
+        socket.startReadMsg()
+        socket.delegate = self
+        return socket
+    }()
+    
     // 聊天工具栏
     fileprivate lazy var chatToolView:ChatToolView = ChatToolView.loadFromNib()
     // 送礼物视图
@@ -21,14 +29,24 @@ class LiveRoomViewController: UIViewController {
         giftView.delegate = self
         return giftView
     }()
+    
+    fileprivate var heartTimer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
+        // 发送进入房间的消息
+        socket.sendJoinRoom()
+        // 开启心跳
+        addHeartBeatTimer()
+        
 
     }
     deinit {
         NotificationCenter.default.removeObserver(self)
+        heartTimer?.invalidate()
+        heartTimer = nil
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +56,7 @@ class LiveRoomViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        socket.sendLeaveRoom()
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
@@ -115,11 +134,11 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
     
     // 聊天框点击发送
     func toolViewSendClick(_ toolView: ChatToolView, _ message: String) {
-        print(message)
+        socket.sendTextMsg(text: message)
     }
     // 发送了礼物
     func sendGift(giftView: GiftView, giftModel: GiftModel) {
-        print(giftModel.subject)
+      
     }
     
     
@@ -156,9 +175,33 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
     
 }
 
+//MARK:- 收到即时消息
+extension LiveRoomViewController: ZFSocketDelegate {
+    func socket(_ socket: ZFSocket, joinRoom user: UserInfo) {
+        print(user.name + "加入了房间")
+    }
+    func socket(_ socket: ZFSocket, leaveRoom user: UserInfo) {
+        print(user.name + "离开了房间")
+    }
+    func socket(_ socket: ZFSocket, chatMsg: ChatMessage) {
+        print(chatMsg.user.name + "发送了消息:" + chatMsg.text)
+    }
+    func socket(_ socket: ZFSocket, giftMsg: GiftMessage) {
+        print(giftMsg.user.name + "送了礼物:" + giftMsg.giftname)
+    }
+}
 
-
-
+//MARK:- 发送即时消息
+extension LiveRoomViewController {
+    fileprivate func addHeartBeatTimer() {
+        heartTimer = Timer(fireAt: Date(), interval: 9, target: self, selector: #selector(headerBeat), userInfo: nil, repeats: true)
+        RunLoop.main.add(heartTimer!, forMode: .commonModes)
+    }
+    @objc private func headerBeat() {
+        socket.sendHeartBeat()
+    }
+    
+}
 
 
 

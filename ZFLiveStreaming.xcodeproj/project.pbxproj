@@ -13,6 +13,15 @@
 		1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814C0521EC59FAE000DF9CA /* AnchorModel.swift */; };
 		1814C0561EC5AF57000DF9CA /* AnchorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814C0541EC5AF57000DF9CA /* AnchorCell.swift */; };
 		1814C0571EC5AF57000DF9CA /* AnchorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1814C0551EC5AF57000DF9CA /* AnchorCell.xib */; };
+		185C2A311ED50A5B00192D56 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A2B1ED50A5B00192D56 /* ysocket.swift */; };
+		185C2A321ED50A5B00192D56 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A2C1ED50A5B00192D56 /* ytcpsocket.c */; };
+		185C2A331ED50A5B00192D56 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A2D1ED50A5B00192D56 /* ytcpsocket.swift */; };
+		185C2A341ED50A5B00192D56 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A2E1ED50A5B00192D56 /* yudpsocket.c */; };
+		185C2A351ED50A5B00192D56 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A2F1ED50A5B00192D56 /* yudpsocket.swift */; };
+		185C2A381ED50AEB00192D56 /* Immessage.proto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A371ED50AEB00192D56 /* Immessage.proto.swift */; };
+		185C2A3A1ED50E4B00192D56 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A391ED50E4B00192D56 /* KingfisherExtension.swift */; };
+		185C2A3D1ED5142200192D56 /* ZFSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A3C1ED5142200192D56 /* ZFSocket.swift */; };
+		185C2A3F1ED5237900192D56 /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A3E1ED5237900192D56 /* ChatContentView.swift */; };
 		18BF499A1ECD3FEA002DDB7D /* EmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF49991ECD3FEA002DDB7D /* EmotionView.swift */; };
 		18BF499D1ECD4868002DDB7D /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */; };
 		18BF499E1ECD4868002DDB7D /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */; };
@@ -90,6 +99,15 @@
 		1814C0521EC59FAE000DF9CA /* AnchorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		1814C0541EC5AF57000DF9CA /* AnchorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorCell.swift; sourceTree = "<group>"; };
 		1814C0551EC5AF57000DF9CA /* AnchorCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnchorCell.xib; sourceTree = "<group>"; };
+		185C2A2B1ED50A5B00192D56 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		185C2A2C1ED50A5B00192D56 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		185C2A2D1ED50A5B00192D56 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		185C2A2E1ED50A5B00192D56 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		185C2A2F1ED50A5B00192D56 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		185C2A371ED50AEB00192D56 /* Immessage.proto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immessage.proto.swift; sourceTree = "<group>"; };
+		185C2A391ED50E4B00192D56 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		185C2A3C1ED5142200192D56 /* ZFSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFSocket.swift; sourceTree = "<group>"; };
+		185C2A3E1ED5237900192D56 /* ChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
 		18BF49991ECD3FEA002DDB7D /* EmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionView.swift; sourceTree = "<group>"; };
 		18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
 		18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
@@ -179,8 +197,29 @@
 			isa = PBXGroup;
 			children = (
 				1814C04F1EC551E3000DF9CA /* NetworkTool.swift */,
+				185C2A391ED50E4B00192D56 /* KingfisherExtension.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		185C2A2A1ED50A5B00192D56 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				185C2A2B1ED50A5B00192D56 /* ysocket.swift */,
+				185C2A2C1ED50A5B00192D56 /* ytcpsocket.c */,
+				185C2A2D1ED50A5B00192D56 /* ytcpsocket.swift */,
+				185C2A2E1ED50A5B00192D56 /* yudpsocket.c */,
+				185C2A2F1ED50A5B00192D56 /* yudpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+		185C2A3B1ED5142200192D56 /* ZFSocket */ = {
+			isa = PBXGroup;
+			children = (
+				185C2A3C1ED5142200192D56 /* ZFSocket.swift */,
+			);
+			path = ZFSocket;
 			sourceTree = "<group>";
 		};
 		18BF49A71ECDA3F7002DDB7D /* GiftView */ = {
@@ -328,6 +367,7 @@
 		18EB04D11ECA974100D9AB1E /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				185C2A3B1ED5142200192D56 /* ZFSocket */,
 				18EB04D21ECA974100D9AB1E /* Controller */,
 				18EB04D51ECA974100D9AB1E /* ViewModel */,
 				18EB04D41ECA974100D9AB1E /* View */,
@@ -352,6 +392,7 @@
 				18BF49A31ECD741B002DDB7D /* EmotionPackage.swift */,
 				18BF49AE1ECE93C6002DDB7D /* GiftModel.swift */,
 				18BF49B01ECE968D002DDB7D /* GiftPackage.swift */,
+				185C2A371ED50AEB00192D56 /* Immessage.proto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -401,6 +442,7 @@
 		18F295C51ECD2657006086AF /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
+				185C2A3E1ED5237900192D56 /* ChatContentView.swift */,
 				18BF49991ECD3FEA002DDB7D /* EmotionView.swift */,
 				18BF49A51ECD7964002DDB7D /* EmotionCell.swift */,
 				18F295CA1ECD39F8006086AF /* ChatToolView.swift */,
@@ -431,6 +473,7 @@
 		18F46AE41EC4391D009B7FDC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				185C2A2A1ED50A5B00192D56 /* ysocket */,
 				18EB05741ECC510B00D9AB1E /* ZFPageView */,
 			);
 			path = Library;
@@ -699,12 +742,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185C2A311ED50A5B00192D56 /* ysocket.swift in Sources */,
 				18BF49B41ECED11A002DDB7D /* GiftCollectionCell.swift in Sources */,
 				18F46B2E1EC466A9009B7FDC /* ZFWaterfallLayout.swift in Sources */,
 				18E8C28A1EC1993C00187F97 /* AppDelegate.swift in Sources */,
 				1814C0561EC5AF57000DF9CA /* AnchorCell.swift in Sources */,
 				18BF49A91ECDA45E002DDB7D /* GiftView.swift in Sources */,
 				1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */,
+				185C2A3F1ED5237900192D56 /* ChatContentView.swift in Sources */,
 				18BF49A41ECD741B002DDB7D /* EmotionPackage.swift in Sources */,
 				18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */,
 				18F325571EC29A980014AF77 /* UIColor+extension.swift in Sources */,
@@ -712,16 +757,22 @@
 				18BF499A1ECD3FEA002DDB7D /* EmotionView.swift in Sources */,
 				18BF49B71ECED3A3002DDB7D /* GiftPackageVM.swift in Sources */,
 				18BF49AD1ECE87F0002DDB7D /* GiftVM.swift in Sources */,
+				185C2A3A1ED50E4B00192D56 /* KingfisherExtension.swift in Sources */,
+				185C2A321ED50A5B00192D56 /* ytcpsocket.c in Sources */,
 				18EB057E1ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift in Sources */,
 				18F295C41ECD2363006086AF /* LoadNibable.swift in Sources */,
 				18EB057D1ECC510B00D9AB1E /* ZFPageCollectionView.swift in Sources */,
 				18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */,
 				18BF49A21ECD72A6002DDB7D /* Emotion.swift in Sources */,
+				185C2A341ED50A5B00192D56 /* yudpsocket.c in Sources */,
+				185C2A351ED50A5B00192D56 /* yudpsocket.swift in Sources */,
 				18F295CB1ECD39F8006086AF /* ChatToolView.swift in Sources */,
 				18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */,
 				18BF49B11ECE968D002DDB7D /* GiftPackage.swift in Sources */,
+				185C2A381ED50AEB00192D56 /* Immessage.proto.swift in Sources */,
 				18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */,
 				1814C04D1EC54BF2000DF9CA /* AnchorVM.swift in Sources */,
+				185C2A331ED50A5B00192D56 /* ytcpsocket.swift in Sources */,
 				18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */,
 				18EB057F1ECC510B00D9AB1E /* ZFPageStyle.swift in Sources */,
 				18EB04DC1ECAA38D00D9AB1E /* EmitterAnimate.swift in Sources */,
@@ -737,6 +788,7 @@
 				18EB047E1EC93BB000D9AB1E /* UIImage+extension.swift in Sources */,
 				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,
 				18EB04D81ECA976600D9AB1E /* LiveRoomViewController.swift in Sources */,
+				185C2A3D1ED5142200192D56 /* ZFSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

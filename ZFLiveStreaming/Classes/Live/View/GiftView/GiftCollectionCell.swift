@@ -16,7 +16,7 @@ class GiftCollectionCell: UICollectionViewCell {
     var giftPackeVM: GiftPackageVM? {
         didSet {
             guard let giftPackeVM = giftPackeVM else { return }
-            iconImageView.sd_setImage(with: giftPackeVM.iconImageUrl)
+            iconImageView.zf_setImage(with:giftPackeVM.iconImageUrl?.absoluteString)
             subjectLabel.text = giftPackeVM.subjectStr
             priceLabel.text = giftPackeVM.priceStr
         }

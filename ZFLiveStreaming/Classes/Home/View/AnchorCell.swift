@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 class AnchorCell: UICollectionViewCell {
     var phoneHeight: CGFloat?
     var anchorViewModel: AnchorVM? {
@@ -22,9 +21,8 @@ class AnchorCell: UICollectionViewCell {
 //                let targetSize = CGSize(width: self.bounds.width, height: self.phoneHeight!)
 //                self.albumImageView.image = image
 //            }
-            albumImageView.sd_setImage(with: URL(string: anchorViewModel.avatorUrl)) { (image, _, _, _) in
-
-                
+        albumImageView.zf_setImage(with: anchorViewModel.avatorUrl, "home_pic_default")
+            
                 // 解决了 图片拉伸问题后发现内存暴涨!!!
                 // 此方法用在给ImageView赋值的时候会减少内存,用在SDWebImage回调这里会增加内存
 //                self.albumImageView.image = image?.compressImage()
@@ -32,7 +30,7 @@ class AnchorCell: UICollectionViewCell {
 //                self.albumImageView.image = image?.cirImage(8, self.albumImageView.bounds.size)
                 
                 
-            }
+            
             
             liveImageView.isHidden = !anchorViewModel.isLiving
             
