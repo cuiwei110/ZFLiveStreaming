@@ -123,6 +123,7 @@ extension ZFSocket {
     func sendGiftMsg(giftName: String, giftUrl: String, giftCount: Int){
         let giftMsg = GiftMessage.Builder()
         giftMsg.user = (try! userinfo.build())
+        giftMsg.giftname = giftName
         giftMsg.giftUrl = giftUrl
         giftMsg.giftcount = Int32(giftCount)
         let msgData = (try! giftMsg.build()).data()

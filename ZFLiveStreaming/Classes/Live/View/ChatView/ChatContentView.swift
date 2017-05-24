@@ -10,6 +10,7 @@ import UIKit
 private let cellID = "cellID"
 class ChatContentView: UIView {
     fileprivate lazy var tableView = UITableView()
+    fileprivate lazy var messageArr = [NSAttributedString]()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,14 +37,24 @@ extension ChatContentView {
         addSubview(tableView)
     }
 }
+//MARK:- 对外提供的添加消息方法
+extension ChatContentView {
+    func insertMessage(_ message: NSAttributedString) {
+        messageArr.append(message)
+        tableView.reloadData()
+        //滚动到最后一行
+        let lastIndexPath = IndexPath(row: messageArr.count - 1, section: 0)
+        tableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: false)
+    }
+}
 //MARK:- 数据源
 extension ChatContentView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return messageArr.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ChatContentCell
-        cell.contentLabel.text = "dalskjdf laskjd flkasj dflasj dflksaj dlfj asldfj alsdjf阿拉斯加地方拉看手机的父类卡视角地方离开家两节课 "
+        cell.contentLabel.attributedText = messageArr[indexPath.row]
         
         return cell
     }

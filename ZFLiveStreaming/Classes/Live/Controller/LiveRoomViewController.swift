@@ -144,7 +144,8 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
     }
     // 发送了礼物
     func sendGift(giftView: GiftView, giftModel: GiftModel) {
-      
+        let giftCount = 1
+        socket.sendGiftMsg(giftName: giftModel.subject, giftUrl: giftModel.img2, giftCount: giftCount)
     }
     
     
@@ -169,8 +170,6 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
             self.chatToolView.frame.origin.y = chatToolY
             self.chatContentView.frame.origin.y = chatContentY
         }
-      
-        
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         chatToolView.inputTextField.resignFirstResponder()
@@ -184,16 +183,21 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
 //MARK:- 收到即时消息
 extension LiveRoomViewController: ZFSocketDelegate {
     func socket(_ socket: ZFSocket, joinRoom user: UserInfo) {
-        print(user.name + "加入了房间")
+        let attriStr = AttriStringGenerator.joinOrLeaveRoomAttriString(userName: user.name, isJoin: true)
+        chatContentView.insertMessage(attriStr)
     }
     func socket(_ socket: ZFSocket, leaveRoom user: UserInfo) {
-        print(user.name + "离开了房间")
+        let attriStr = AttriStringGenerator.joinOrLeaveRoomAttriString(userName: user.name, isJoin: false)
+        chatContentView.insertMessage(attriStr)
     }
     func socket(_ socket: ZFSocket, chatMsg: ChatMessage) {
-        print(chatMsg.user.name + "发送了消息:" + chatMsg.text)
+        let attriStr = AttriStringGenerator.chatMessageAttriString(userName: chatMsg.user.name, chatText: chatMsg.text)
+        chatContentView.insertMessage(attriStr)
     }
     func socket(_ socket: ZFSocket, giftMsg: GiftMessage) {
-        print(giftMsg.user.name + "送了礼物:" + giftMsg.giftname)
+        let attriStr = AttriStringGenerator.giftMessageAttriString(userName: giftMsg.user.name, giftName: giftMsg.giftname, giftUrl: giftMsg.giftUrl)
+        chatContentView.insertMessage(attriStr)
+        
     }
 }
 

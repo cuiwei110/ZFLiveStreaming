@@ -16,6 +16,7 @@ let KSCREEN_W: CGFloat = UIScreen.main.bounds.width
 let KSCREEN_H: CGFloat = UIScreen.main.bounds.height
 
 // 控件尺寸
+let KLiveRoomNormalFont = UIFont.systemFont(ofSize: 15)
 let KEmotionViewH: CGFloat = 216
 let kGiftViewH : CGFloat = 320
 let KChatToolViewH: CGFloat = 44
