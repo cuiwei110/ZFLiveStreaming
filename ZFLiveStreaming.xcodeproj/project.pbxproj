@@ -22,6 +22,8 @@
 		185C2A3A1ED50E4B00192D56 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A391ED50E4B00192D56 /* KingfisherExtension.swift */; };
 		185C2A3D1ED5142200192D56 /* ZFSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A3C1ED5142200192D56 /* ZFSocket.swift */; };
 		185C2A3F1ED5237900192D56 /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A3E1ED5237900192D56 /* ChatContentView.swift */; };
+		185C2A421ED5308D00192D56 /* ChatContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185C2A401ED5308D00192D56 /* ChatContentCell.swift */; };
+		185C2A431ED5308D00192D56 /* ChatContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185C2A411ED5308D00192D56 /* ChatContentCell.xib */; };
 		18BF499A1ECD3FEA002DDB7D /* EmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BF49991ECD3FEA002DDB7D /* EmotionView.swift */; };
 		18BF499D1ECD4868002DDB7D /* QHNormalEmotionSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */; };
 		18BF499E1ECD4868002DDB7D /* QHSohuGifSort.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */; };
@@ -108,6 +110,8 @@
 		185C2A391ED50E4B00192D56 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
 		185C2A3C1ED5142200192D56 /* ZFSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFSocket.swift; sourceTree = "<group>"; };
 		185C2A3E1ED5237900192D56 /* ChatContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		185C2A401ED5308D00192D56 /* ChatContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContentCell.swift; sourceTree = "<group>"; };
+		185C2A411ED5308D00192D56 /* ChatContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatContentCell.xib; sourceTree = "<group>"; };
 		18BF49991ECD3FEA002DDB7D /* EmotionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionView.swift; sourceTree = "<group>"; };
 		18BF499B1ECD4868002DDB7D /* QHNormalEmotionSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHNormalEmotionSort.plist; sourceTree = "<group>"; };
 		18BF499C1ECD4868002DDB7D /* QHSohuGifSort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = QHSohuGifSort.plist; sourceTree = "<group>"; };
@@ -443,6 +447,8 @@
 			isa = PBXGroup;
 			children = (
 				185C2A3E1ED5237900192D56 /* ChatContentView.swift */,
+				185C2A401ED5308D00192D56 /* ChatContentCell.swift */,
+				185C2A411ED5308D00192D56 /* ChatContentCell.xib */,
 				18BF49991ECD3FEA002DDB7D /* EmotionView.swift */,
 				18BF49A51ECD7964002DDB7D /* EmotionCell.swift */,
 				18F295CA1ECD39F8006086AF /* ChatToolView.swift */,
@@ -670,6 +676,7 @@
 				18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */,
 				1814C0571EC5AF57000DF9CA /* AnchorCell.xib in Resources */,
 				18E8C2C51EC19C3600187F97 /* Discover.storyboard in Resources */,
+				185C2A431ED5308D00192D56 /* ChatContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -769,6 +776,7 @@
 				18F295CB1ECD39F8006086AF /* ChatToolView.swift in Sources */,
 				18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */,
 				18BF49B11ECE968D002DDB7D /* GiftPackage.swift in Sources */,
+				185C2A421ED5308D00192D56 /* ChatContentCell.swift in Sources */,
 				185C2A381ED50AEB00192D56 /* Immessage.proto.swift in Sources */,
 				18EB05801ECC510B00D9AB1E /* ZFPageView.swift in Sources */,
 				1814C04D1EC54BF2000DF9CA /* AnchorVM.swift in Sources */,

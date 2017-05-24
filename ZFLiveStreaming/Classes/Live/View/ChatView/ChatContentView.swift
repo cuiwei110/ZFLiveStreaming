@@ -7,15 +7,50 @@
 //
 
 import UIKit
-
+private let cellID = "cellID"
 class ChatContentView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    fileprivate lazy var tableView = UITableView()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupUI()
+        backgroundColor = UIColor.clear
     }
-    */
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
 }
+//MARK:- 设置UI
+extension ChatContentView {
+    fileprivate func setupUI() {
+        tableView = UITableView(frame: bounds, style: .plain)
+        tableView.backgroundColor = UIColor.clear
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.register(UINib(nibName: "ChatContentCell", bundle: nil), forCellReuseIdentifier: cellID)
+        addSubview(tableView)
+    }
+}
+//MARK:- 数据源
+extension ChatContentView: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! ChatContentCell
+        cell.contentLabel.text = "dalskjdf laskjd flkasj dflasj dflksaj dlfj asldfj alsdjf阿拉斯加地方拉看手机的父类卡视角地方离开家两节课 "
+        
+        return cell
+    }
+}
+
+
+
+
+
+

@@ -7,11 +7,8 @@
 //
 
 import UIKit
-
+private let KChatContentViewH: CGFloat = 200
 class LiveRoomViewController: UIViewController {
-
-    @IBOutlet weak var backImageView: UIImageView!
-    @IBOutlet weak var avatorImageView: UIImageView!
     fileprivate lazy var socket: ZFSocket = {
         let socket = ZFSocket(addr: "0.0.0.0", port: 7878)
         socket.connectServer()
@@ -19,6 +16,8 @@ class LiveRoomViewController: UIViewController {
         socket.delegate = self
         return socket
     }()
+    @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var avatorImageView: UIImageView!
     
     // 聊天工具栏
     fileprivate lazy var chatToolView:ChatToolView = ChatToolView.loadFromNib()
@@ -29,6 +28,7 @@ class LiveRoomViewController: UIViewController {
         giftView.delegate = self
         return giftView
     }()
+    fileprivate  var chatContentView:ChatContentView!
     
     fileprivate var heartTimer: Timer?
     
@@ -67,6 +67,7 @@ extension LiveRoomViewController {
     fileprivate func setupUI() {
         setupBlurView()
         setupChatView()
+        setupChatContentView()
     }
     // 背景
     private func setupBlurView() {
@@ -82,6 +83,11 @@ extension LiveRoomViewController {
         chatToolView.delegate = self
         view.addSubview(chatToolView)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChangeFrame(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    // 聊天消息视图
+    private func setupChatContentView() {
+        chatContentView = ChatContentView(frame: CGRect(x: 5, y: KSCREEN_H - KChatToolViewH - KChatContentViewH, width: KSCREEN_W, height: KChatContentViewH))
+        view.addSubview(chatContentView)
     }
     
     
@@ -157,13 +163,13 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
         
         let duration = note.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
         let endFrame = (note.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        let chatToolY = endFrame.origin.y - KChatToolViewH
+        let chatToolY = endFrame.origin.y >= KSCREEN_H ? KSCREEN_H : endFrame.origin.y - KChatToolViewH
+        let chatContentY = endFrame.origin.y >= KSCREEN_H ? KSCREEN_H - KChatToolViewH - KChatContentViewH : endFrame.origin.y - KChatToolViewH - KChatContentViewH
         UIView.animate(withDuration: duration) { 
             self.chatToolView.frame.origin.y = chatToolY
+            self.chatContentView.frame.origin.y = chatContentY
         }
-        if endFrame.origin.y >= KSCREEN_H {
-            chatToolView.frame.origin.y = KSCREEN_H
-        }
+      
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
