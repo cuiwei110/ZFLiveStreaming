@@ -74,6 +74,12 @@
 		18F46B361EC46D78009B7FDC /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B351EC46D78009B7FDC /* HomeType.swift */; };
 		18F46B391EC46DFE009B7FDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B381EC46DFE009B7FDC /* HomeViewController.swift */; };
 		18F46B3B1EC47118009B7FDC /* AnchorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */; };
+		18FA1FA21ED7FF8600CE5CF1 /* ZFGiftAnimateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1F9C1ED7FF8600CE5CF1 /* ZFGiftAnimateModel.swift */; };
+		18FA1FA31ED7FF8600CE5CF1 /* ZFGiftAnimateStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1F9D1ED7FF8600CE5CF1 /* ZFGiftAnimateStyle.swift */; };
+		18FA1FA41ED7FF8600CE5CF1 /* ZFGiftChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1F9E1ED7FF8600CE5CF1 /* ZFGiftChannelView.swift */; };
+		18FA1FA51ED7FF8600CE5CF1 /* ZFGiftChannelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FA1F9F1ED7FF8600CE5CF1 /* ZFGiftChannelView.xib */; };
+		18FA1FA61ED7FF8600CE5CF1 /* ZFGiftContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1FA01ED7FF8600CE5CF1 /* ZFGiftContainerView.swift */; };
+		18FA1FA71ED7FF8600CE5CF1 /* ZFGiftDigitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA1FA11ED7FF8600CE5CF1 /* ZFGiftDigitLabel.swift */; };
 		61B52126FC09879416AD7829 /* Pods_ZFLiveStreaming.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C8DD166E0903FBBD13C5F5 /* Pods_ZFLiveStreaming.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +175,12 @@
 		18F46B351EC46D78009B7FDC /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		18F46B381EC46DFE009B7FDC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnchorViewController.swift; sourceTree = "<group>"; };
+		18FA1F9C1ED7FF8600CE5CF1 /* ZFGiftAnimateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFGiftAnimateModel.swift; sourceTree = "<group>"; };
+		18FA1F9D1ED7FF8600CE5CF1 /* ZFGiftAnimateStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFGiftAnimateStyle.swift; sourceTree = "<group>"; };
+		18FA1F9E1ED7FF8600CE5CF1 /* ZFGiftChannelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFGiftChannelView.swift; sourceTree = "<group>"; };
+		18FA1F9F1ED7FF8600CE5CF1 /* ZFGiftChannelView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZFGiftChannelView.xib; sourceTree = "<group>"; };
+		18FA1FA01ED7FF8600CE5CF1 /* ZFGiftContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFGiftContainerView.swift; sourceTree = "<group>"; };
+		18FA1FA11ED7FF8600CE5CF1 /* ZFGiftDigitLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZFGiftDigitLabel.swift; sourceTree = "<group>"; };
 		45FD4AE4C460A4F1B9C5BC23 /* Pods-ZFLiveStreaming.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFLiveStreaming.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZFLiveStreaming/Pods-ZFLiveStreaming.release.xcconfig"; sourceTree = "<group>"; };
 		A0C8DD166E0903FBBD13C5F5 /* Pods_ZFLiveStreaming.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZFLiveStreaming.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -407,6 +419,7 @@
 		18EB04D41ECA974100D9AB1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				18FA1F9B1ED7FF8600CE5CF1 /* GiftAniContainnerView */,
 				18F295C51ECD2657006086AF /* ChatView */,
 				18BF49A71ECDA3F7002DDB7D /* GiftView */,
 			);
@@ -534,6 +547,19 @@
 				18F46B3A1EC47118009B7FDC /* AnchorViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		18FA1F9B1ED7FF8600CE5CF1 /* GiftAniContainnerView */ = {
+			isa = PBXGroup;
+			children = (
+				18FA1FA01ED7FF8600CE5CF1 /* ZFGiftContainerView.swift */,
+				18FA1F9E1ED7FF8600CE5CF1 /* ZFGiftChannelView.swift */,
+				18FA1F9F1ED7FF8600CE5CF1 /* ZFGiftChannelView.xib */,
+				18FA1F9C1ED7FF8600CE5CF1 /* ZFGiftAnimateModel.swift */,
+				18FA1F9D1ED7FF8600CE5CF1 /* ZFGiftAnimateStyle.swift */,
+				18FA1FA11ED7FF8600CE5CF1 /* ZFGiftDigitLabel.swift */,
+			);
+			path = GiftAniContainnerView;
 			sourceTree = "<group>";
 		};
 		8C1102C150BE317F15AAC38E /* Pods */ = {
@@ -674,6 +700,7 @@
 				18F295C91ECD2657006086AF /* ChatToolView.xib in Resources */,
 				18E8C2911EC1993C00187F97 /* Assets.xcassets in Resources */,
 				18E8C28F1EC1993C00187F97 /* Main.storyboard in Resources */,
+				18FA1FA51ED7FF8600CE5CF1 /* ZFGiftChannelView.xib in Resources */,
 				18BF499D1ECD4868002DDB7D /* QHNormalEmotionSort.plist in Resources */,
 				18BF49AB1ECDA48E002DDB7D /* GiftView.xib in Resources */,
 				18E8C2C71EC19C3E00187F97 /* Profile.storyboard in Resources */,
@@ -760,6 +787,7 @@
 				1814C0561EC5AF57000DF9CA /* AnchorCell.swift in Sources */,
 				18BF49A91ECDA45E002DDB7D /* GiftView.swift in Sources */,
 				1814C0531EC59FAE000DF9CA /* AnchorModel.swift in Sources */,
+				18FA1FA41ED7FF8600CE5CF1 /* ZFGiftChannelView.swift in Sources */,
 				185C2A3F1ED5237900192D56 /* ChatContentView.swift in Sources */,
 				18BF49A41ECD741B002DDB7D /* EmotionPackage.swift in Sources */,
 				18EB05821ECC510B00D9AB1E /* ZFTitleView.swift in Sources */,
@@ -771,9 +799,11 @@
 				185C2A3A1ED50E4B00192D56 /* KingfisherExtension.swift in Sources */,
 				185C2A321ED50A5B00192D56 /* ytcpsocket.c in Sources */,
 				18EB057E1ECC510B00D9AB1E /* ZFPageCollectionViewLayout.swift in Sources */,
+				18FA1FA21ED7FF8600CE5CF1 /* ZFGiftAnimateModel.swift in Sources */,
 				18F295C41ECD2363006086AF /* LoadNibable.swift in Sources */,
 				18EB057D1ECC510B00D9AB1E /* ZFPageCollectionView.swift in Sources */,
 				18EB05811ECC510B00D9AB1E /* ZFTitleLabel.swift in Sources */,
+				18FA1FA71ED7FF8600CE5CF1 /* ZFGiftDigitLabel.swift in Sources */,
 				18BF49A21ECD72A6002DDB7D /* Emotion.swift in Sources */,
 				185C2A341ED50A5B00192D56 /* yudpsocket.c in Sources */,
 				185C2A351ED50A5B00192D56 /* yudpsocket.swift in Sources */,
@@ -794,8 +824,10 @@
 				18BF49A01ECD7275002DDB7D /* EmotionVM.swift in Sources */,
 				18E8C2CC1EC1A79700187F97 /* Constant.swift in Sources */,
 				18BF49AF1ECE93C6002DDB7D /* GiftModel.swift in Sources */,
+				18FA1FA31ED7FF8600CE5CF1 /* ZFGiftAnimateStyle.swift in Sources */,
 				1814C0501EC551E3000DF9CA /* NetworkTool.swift in Sources */,
 				18F46AE31EC43880009B7FDC /* MainTabBarController.swift in Sources */,
+				18FA1FA61ED7FF8600CE5CF1 /* ZFGiftContainerView.swift in Sources */,
 				18F46AE11EC43880009B7FDC /* BaseNavigationController.swift in Sources */,
 				18EB047E1EC93BB000D9AB1E /* UIImage+extension.swift in Sources */,
 				18F46AE21EC43880009B7FDC /* BaseViewController.swift in Sources */,

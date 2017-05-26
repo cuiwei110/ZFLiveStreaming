@@ -10,13 +10,14 @@ import UIKit
 private let KChatContentViewH: CGFloat = 200
 class LiveRoomViewController: UIViewController {
     fileprivate lazy var socket: ZFSocket = {
-        let socket = ZFSocket(addr: "0.0.0.0", port: 7878)
+        let socket = ZFSocket(addr: "192.168.31.119", port: 7878)
         socket.connectServer()
         socket.startReadMsg()
         socket.delegate = self
         return socket
     }()
     @IBOutlet weak var backImageView: UIImageView!
+ 
     @IBOutlet weak var avatorImageView: UIImageView!
     
     // 聊天工具栏
@@ -28,8 +29,14 @@ class LiveRoomViewController: UIViewController {
         giftView.delegate = self
         return giftView
     }()
+    // 礼物动画展示视图
+    fileprivate lazy var giftContainnerView: ZFGiftContainerView = {
+        let giftContainerView = ZFGiftContainerView(frame: CGRect(x: 0, y: self.avatorImageView.frame.maxY + 70, width: self.view.bounds.width / 2, height: 100))
+        return giftContainerView
+    }()
+    //  聊天内容视图
     fileprivate  var chatContentView:ChatContentView!
-    
+   
     fileprivate var heartTimer: Timer?
     
     override func viewDidLoad() {
@@ -140,12 +147,17 @@ extension LiveRoomViewController: ChatToolViewDelegate, GiftViewDelegate {
     
     // 聊天框点击发送
     func toolViewSendClick(_ toolView: ChatToolView, _ message: String) {
-        socket.sendTextMsg(text: message)
+        DispatchQueue.global().async {
+            self.socket.sendTextMsg(text: message)
+        }
     }
     // 发送了礼物
-    func sendGift(giftView: GiftView, giftModel: GiftModel) {
+    func sendGift(giftView: GiftView, giftModel: GiftPackageVM) {
         let giftCount = 1
-        socket.sendGiftMsg(giftName: giftModel.subject, giftUrl: giftModel.img2, giftCount: giftCount)
+        DispatchQueue.global().async {
+            self.socket.sendGiftMsg(giftName: giftModel.subjectStr, giftUrl: giftModel.iconImageUrl!.absoluteString, giftCount: giftCount)
+        }
+        
     }
     
     
@@ -197,6 +209,10 @@ extension LiveRoomViewController: ZFSocketDelegate {
     func socket(_ socket: ZFSocket, giftMsg: GiftMessage) {
         let attriStr = AttriStringGenerator.giftMessageAttriString(userName: giftMsg.user.name, giftName: giftMsg.giftname, giftUrl: giftMsg.giftUrl)
         chatContentView.insertMessage(attriStr)
+        let giftAniModel = ZFGiftAnimateModel(senderName: giftMsg.user.name, senderURL: giftMsg.user.iconUrl, giftName: giftMsg.giftname, giftURL: giftMsg.giftUrl)
+        view.addSubview(giftContainnerView)
+
+        giftContainnerView.showWithGiftAniModel(giftAniModel)
         
     }
 }

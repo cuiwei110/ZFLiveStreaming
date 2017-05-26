@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LiveRoomViewController" customModule="ZFLiveStreaming" customModuleProvider="target">
             <connections>
-                <outlet property="avatorImageView" destination="iWg-d7-SA8" id="mBO-9L-DGK"/>
+                <outlet property="avatorImageView" destination="4eM-rn-0T6" id="n48-zk-8ZQ"/>
                 <outlet property="backImageView" destination="iWg-d7-SA8" id="4dD-oB-zs5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -168,7 +167,7 @@
                 <constraint firstAttribute="bottom" secondItem="iWg-d7-SA8" secondAttribute="bottom" id="xEX-0r-HbU"/>
                 <constraint firstItem="oXR-nU-4qx" firstAttribute="top" secondItem="Uvy-jz-BeJ" secondAttribute="top" id="xQx-VC-hX3"/>
             </constraints>
-            <point key="canvasLocation" x="-436" y="141"/>
+            <point key="canvasLocation" x="-639" y="105"/>
         </view>
     </objects>
     <resources>

@@ -151,7 +151,9 @@ extension ZFPageCollectionView: UICollectionViewDelegate, ZFTitleViewDelegate {
         let indexPath = IndexPath(item: 0, section: selectIndex)
         currentIndexPath = indexPath
         collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
-        collectionView.contentOffset.x -= layout.sectionInset.left
+        if selectIndex != titles.count - 1 {
+            collectionView.contentOffset.x -= layout.sectionInset.left
+        }
         updatePageControl(section: selectIndex)
         
     }

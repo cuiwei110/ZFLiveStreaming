@@ -19,8 +19,10 @@ class GiftPackageVM {
         self.iconImageUrl = URL(string: giftModel.img2)
         if giftModel.subject.contains("(有声)") {
             self.subjectStr = giftModel.subject.replacingOccurrences(of: "(有声)", with: "")
+        }else {
+            self.subjectStr = giftModel.subject
         }
-        self.subjectStr = giftModel.subject
+
         self.priceStr = String(giftModel.coin)
     }
 }

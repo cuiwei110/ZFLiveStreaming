@@ -9,7 +9,7 @@
 import UIKit
 private let KGiftCell = "KGiftCell"
 protocol GiftViewDelegate: class {
-    func sendGift(giftView: GiftView, giftModel: GiftModel)
+    func sendGift(giftView: GiftView, giftModel: GiftPackageVM)
 }
 
 
@@ -101,8 +101,11 @@ extension GiftView: ZFPageCollectionViewDelegate {
 //MARK:- 点击事件
 extension GiftView {
     @IBAction func sendGiftClick(_ sender: UIButton) {
-        let giftModel = giftVM.giftListData[currentIndexPath!.section].list[currentIndexPath!.row].giftModel
-        delegate?.sendGift(giftView: self, giftModel: giftModel)
+        DispatchQueue.global().async {
+            let giftPackVM = self.giftVM.giftListData[self.currentIndexPath!.section].list[self.currentIndexPath!.row]
+            self.delegate?.sendGift(giftView: self, giftModel: giftPackVM)
+        }
+       
     }
 }
 

@@ -50,7 +50,7 @@ class AttriStringGenerator{
     }
     
     class func giftMessageAttriString(userName: String, giftName: String, giftUrl: String) -> NSAttributedString {
-        let giftMsgStr = userName + " 送给主播一个 " + giftName
+        let giftMsgStr = userName + " 送给主播一个 " + giftName + " "
         let attributeStr = NSMutableAttributedString(string: giftMsgStr)
         
         // 名字添加颜色
@@ -64,7 +64,7 @@ class AttriStringGenerator{
         let giftAttachment = NSTextAttachment()
         let giftImage = KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: giftUrl)
         giftAttachment.image = giftImage
-        giftAttachment.bounds = CGRect(x: 2, y: -3, width: KLiveRoomNormalFont.lineHeight, height: KLiveRoomNormalFont.lineHeight)
+        giftAttachment.bounds = CGRect(x: 5, y: -3, width: KLiveRoomNormalFont.lineHeight, height: KLiveRoomNormalFont.lineHeight)
         let giftAttriStr = NSAttributedString(attachment: giftAttachment)
         attributeStr.append(giftAttriStr)
         
